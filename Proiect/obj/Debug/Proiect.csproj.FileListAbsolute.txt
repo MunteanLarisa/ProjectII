@@ -1,0 +1,13 @@
+C:\Proiect_II\ProjectII\Proiect\bin\Debug\Database.mdf
+C:\Proiect_II\ProjectII\Proiect\bin\Debug\Database_log.ldf
+C:\Proiect_II\ProjectII\Proiect\bin\Debug\Proiect.exe.config
+C:\Proiect_II\ProjectII\Proiect\bin\Debug\Proiect.exe
+C:\Proiect_II\ProjectII\Proiect\bin\Debug\Proiect.pdb
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.csprojAssemblyReference.cache
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.Form1.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.Form2.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.Properties.Resources.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.csproj.GenerateResource.cache
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.csproj.CoreCompileInputs.cache
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.exe
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.pdb

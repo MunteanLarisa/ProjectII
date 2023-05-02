@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proiect.Views;
+using Proiect.Presenters;
 
 namespace Proiect
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IPachete
     {
         public Form1()
         {
@@ -31,5 +33,20 @@ namespace Proiect
         {
 
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DestmenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+            PachetePresenter presenter = new PachetePresenter(this);
+            
+
+        }
     }
+
+
 }

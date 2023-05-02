@@ -29,14 +29,14 @@ namespace Proiect
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtConfirmPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SignUpBtn = new System.Windows.Forms.Button();
+            this.LogInBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,80 +44,91 @@ namespace Proiect
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(25, 175);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtUsername.Location = new System.Drawing.Point(33, 215);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(239, 22);
+            this.txtUsername.TabIndex = 0;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(25, 214);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtPassword.Location = new System.Drawing.Point(33, 263);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(239, 22);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // textBox3
+            // txtConfirmPass
             // 
-            this.textBox3.Location = new System.Drawing.Point(23, 253);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(177, 20);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.txtConfirmPass.Location = new System.Drawing.Point(31, 311);
+            this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmPass.Name = "txtConfirmPass";
+            this.txtConfirmPass.Size = new System.Drawing.Size(235, 22);
+            this.txtConfirmPass.TabIndex = 2;
+            this.txtConfirmPass.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 159);
+            this.label1.Location = new System.Drawing.Point(29, 196);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(113, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 198);
+            this.label2.Location = new System.Drawing.Point(27, 244);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.Size = new System.Drawing.Size(110, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Enter password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 237);
+            this.label3.Location = new System.Drawing.Point(29, 292);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(124, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Confirm password:";
             // 
-            // button1
+            // SignUpBtn
             // 
-            this.button1.Location = new System.Drawing.Point(25, 308);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 40);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Sign Up";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SignUpBtn.Location = new System.Drawing.Point(33, 379);
+            this.SignUpBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.SignUpBtn.Name = "SignUpBtn";
+            this.SignUpBtn.Size = new System.Drawing.Size(200, 49);
+            this.SignUpBtn.TabIndex = 6;
+            this.SignUpBtn.Text = "Sign Up";
+            this.SignUpBtn.UseVisualStyleBackColor = true;
+            this.SignUpBtn.Click += new System.EventHandler(this.SignUpBtn_Click);
             // 
-            // button2
+            // LogInBtn
             // 
-            this.button2.Location = new System.Drawing.Point(23, 354);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 41);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Already have an account? Log  in";
-            this.button2.UseVisualStyleBackColor = true;
+            this.LogInBtn.Location = new System.Drawing.Point(31, 436);
+            this.LogInBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.LogInBtn.Name = "LogInBtn";
+            this.LogInBtn.Size = new System.Drawing.Size(203, 50);
+            this.LogInBtn.TabIndex = 7;
+            this.LogInBtn.Text = "Already have an account? Log  in";
+            this.LogInBtn.UseVisualStyleBackColor = true;
+            this.LogInBtn.Click += new System.EventHandler(this.LogInBtn_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proiect.Properties.Resources._338338433_193792890067019_2279385592599788582_n__1_1;
-            this.pictureBox2.Location = new System.Drawing.Point(438, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(584, 15);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(423, 473);
+            this.pictureBox2.Size = new System.Drawing.Size(564, 582);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
@@ -125,9 +136,10 @@ namespace Proiect
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 421);
+            this.label4.Location = new System.Drawing.Point(16, 518);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(420, 23);
+            this.label4.Size = new System.Drawing.Size(528, 29);
             this.label4.TabIndex = 10;
             this.label4.Text = "Choose your package and see the world with us!";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,9 +150,10 @@ namespace Proiect
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vladimir Script", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.HotPink;
-            this.label5.Location = new System.Drawing.Point(20, 28);
+            this.label5.Location = new System.Drawing.Point(27, 34);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(225, 45);
+            this.label5.Size = new System.Drawing.Size(283, 57);
             this.label5.TabIndex = 11;
             this.label5.Text = "See the World ";
             // 
@@ -149,32 +162,35 @@ namespace Proiect
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.HotPink;
-            this.label6.Location = new System.Drawing.Point(169, 62);
+            this.label6.Location = new System.Drawing.Point(225, 76);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(189, 33);
+            this.label6.Size = new System.Drawing.Size(238, 41);
             this.label6.TabIndex = 12;
             this.label6.Text = " Travel Agency\r\n";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(927, 513);
+            this.ClientSize = new System.Drawing.Size(1236, 631);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LogInBtn);
+            this.Controls.Add(this.SignUpBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConfirmPass);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,14 +199,14 @@ namespace Proiect
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtConfirmPass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SignUpBtn;
+        private System.Windows.Forms.Button LogInBtn;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
