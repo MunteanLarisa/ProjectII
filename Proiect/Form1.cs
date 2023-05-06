@@ -14,6 +14,16 @@ namespace Proiect
 {
     public partial class Form1 : Form, IPachete
     {
+        public string Destinatia { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string OrasDePlecare { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Transport { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime DataPlecarii { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int NrDeNopti { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int NrDeCamere { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Adulti { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Copii { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string PetFriendly { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public Form1()
         {
             InitializeComponent();
