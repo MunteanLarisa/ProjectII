@@ -11,3 +11,17 @@ C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.csproj.GenerateResource.cache
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.csproj.CoreCompileInputs.cache
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.exe
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.pdb
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.csproj.AssemblyReference.cache
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.Checkout.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.Circuits.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.ExoticCircuits.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.HotDeals.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.Login.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.MainPage.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.Packages.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.Properties.Resources.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.SignUp.resources
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.csproj.GenerateResource.cache
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.csproj.CoreCompileInputs.cache
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.exe
+C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.pdb

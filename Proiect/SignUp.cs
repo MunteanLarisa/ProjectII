@@ -15,6 +15,11 @@ using System.Data.SqlClient;
 
 namespace Proiect
 {
+<<<<<<< HEAD:Proiect/SignUp.cs
+    public partial class SignUp : Form
+    {
+        public SignUp()
+=======
     public partial class Form2 : Form, ILogin
     {
         public string Username 
@@ -53,6 +58,7 @@ namespace Proiect
         }
 
         public Form2()
+>>>>>>> 828e088114de08e4732d6fb33093224112fda8ba:Proiect/Form2.cs
         {
             InitializeComponent();
         }
