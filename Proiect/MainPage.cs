@@ -12,6 +12,11 @@ using Proiect.Presenters;
 
 namespace Proiect
 {
+<<<<<<< HEAD:Proiect/MainPage.cs
+    public partial class MainPage : Form
+    {
+        public MainPage()
+=======
     public partial class Form1 : Form, IPachete
     {
         public string Destinatia { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -25,6 +30,7 @@ namespace Proiect
         public string PetFriendly { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public Form1()
+>>>>>>> 828e088114de08e4732d6fb33093224112fda8ba:Proiect/Form1.cs
         {
             InitializeComponent();
         }
@@ -44,16 +50,30 @@ namespace Proiect
 
         }
 
+<<<<<<< HEAD:Proiect/MainPage.cs
+        private void label3_Click(object sender, EventArgs e)
+=======
         private void tabPage1_Click(object sender, EventArgs e)
+>>>>>>> 828e088114de08e4732d6fb33093224112fda8ba:Proiect/Form1.cs
         {
 
         }
 
+<<<<<<< HEAD:Proiect/MainPage.cs
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+=======
         private void DestmenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
             PachetePresenter presenter = new PachetePresenter(this);
             
+>>>>>>> 828e088114de08e4732d6fb33093224112fda8ba:Proiect/Form1.cs
 
         }
     }
