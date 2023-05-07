@@ -11,9 +11,9 @@ namespace Proiect.Views
 {
     public interface ILogin
     {
-        string Username { get; set; }
-        string Password { get; set;  }
-        string ConfPassword { get; set;  }
+        string LoginUsername { get; set; }
+        string LoginPassword { get; set;  }
+        
     }
     
 }

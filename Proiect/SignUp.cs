@@ -15,12 +15,7 @@ using System.Data.SqlClient;
 
 namespace Proiect
 {
-<<<<<<< HEAD:Proiect/SignUp.cs
-    public partial class SignUp : Form
-    {
-        public SignUp()
-=======
-    public partial class Form2 : Form, ILogin
+    public partial class SignUp : Form, IRegister
     {
         public string Username 
         {
@@ -57,15 +52,9 @@ namespace Proiect
             }
         }
 
-        public Form2()
->>>>>>> 828e088114de08e4732d6fb33093224112fda8ba:Proiect/Form2.cs
+        public SignUp()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -76,20 +65,18 @@ namespace Proiect
             cn.Close();
 
         }
-
-        private void SignUpBtn_Click(object sender, EventArgs e)
+        private void BtnSignUp_Click(object sender, EventArgs e)
         {
-            LoginPresenter presenter = new LoginPresenter(this);
+            RegisterPresenter presenter = new RegisterPresenter(this);
             presenter.SignUpButton();
-
         }
 
-        private void LogInBtn_Click(object sender, EventArgs e)
+        private void button_Login_Click(object sender, EventArgs e)
         {
-            LoginPresenter presenter = new LoginPresenter(this);
+            Login login = new Login();
+            login.Show();
+
            
-            presenter.LoginButton();
-       
         }
     }
 }

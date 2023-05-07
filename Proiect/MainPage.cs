@@ -9,74 +9,207 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proiect.Views;
 using Proiect.Presenters;
+using System.Data.SqlClient;
 
 namespace Proiect
 {
-<<<<<<< HEAD:Proiect/MainPage.cs
-    public partial class MainPage : Form
-    {
-        public MainPage()
-=======
-    public partial class Form1 : Form, IPachete
-    {
-        public string Destinatia { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string OrasDePlecare { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Transport { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime DataPlecarii { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int NrDeNopti { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int NrDeCamere { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Adulti { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Copii { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string PetFriendly { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public Form1()
->>>>>>> 828e088114de08e4732d6fb33093224112fda8ba:Proiect/Form1.cs
+    public partial class MainPage : Form, IMainPage
+    {
+
+
+        public MainPage()
+
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public string Destination 
         {
+            get
+            {
+                return menuStrip_Destination.Text;
+            }
+            set
+            {
+                menuStrip_Destination.Text = value;
+            }
+        }
+        public string DepartureCity
+        {
+            get
+            {
+                return menuStrip_CityOfDeparture.Text;
+            }
+            set
+            {
+                menuStrip_CityOfDeparture.Text = value;
+            }
+        }
+        public string Transport
+        {
+            get
+            {
+                return menuStrip_MeanOfTransport.Text;
+            }
+            set
+            {
+                menuStrip_MeanOfTransport.Text = value;
+            }
+        }
+        public DateTime Date
+        {
+            get
+            {
+                return Convert.ToDateTime(menuStrip_DepartureDate.Text);
+            }
+            set
+            {
+                menuStrip_DepartureDate.Text = value.ToString();
+            }
+        }
+        public int Nights
+        {
+            get
+            {
+                return Convert.ToInt32(menuStrip_NoOfNights.Text);
+            }
+            set
+            {
+                menuStrip_NoOfNights.Text = value.ToString();
+            }
+        }
+        public int Rooms { get => Convert.ToInt32(menuStrip_NoOfRooms); set => menuStrip_NoOfRooms.ToString(); }
+        public int Adults { get => Convert.ToInt32(menuStrip_Adults); set => menuStrip_Adults.ToString(); }
+        public int Children { get => Convert.ToInt32(menuStrip_Children); set => menuStrip_Children.ToString(); }
+        public string Pet { get => menuStrip_PetFriendly.Text; set => menuStrip_PetFriendly.Text=value.ToString(); }
 
+        private void menuStrip_Destination_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+ 
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Destination();
+            MessageBox.Show(e.ClickedItem.Text);
+            //switch (presenter)
+            //{
+            //  case "menu name 1":
+            //do stuff
+            //    break;
+
+            //  case "menu name 2":
+            // do stuff
+            //    break;
+            //}
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void MainPage_Load(object sender, EventArgs e)
         {
+            SqlConnection cn2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
+            cn2.Open();
 
+            cn2.Close();
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
-
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Barcelona();
         }
 
-<<<<<<< HEAD:Proiect/MainPage.cs
-        private void label3_Click(object sender, EventArgs e)
-=======
-        private void tabPage1_Click(object sender, EventArgs e)
->>>>>>> 828e088114de08e4732d6fb33093224112fda8ba:Proiect/Form1.cs
+        private void pictureBox7_Click(object sender, EventArgs e)
         {
-
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Belgrade();
         }
 
-<<<<<<< HEAD:Proiect/MainPage.cs
-        private void label15_Click(object sender, EventArgs e)
+        private void pictureBox14_Click(object sender, EventArgs e)
         {
-
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Oslo();
         }
 
-        private void label25_Click(object sender, EventArgs e)
+        private void pictureBox13_Click(object sender, EventArgs e)
         {
-=======
-        private void DestmenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.AbuDhabi();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
         {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Prague();
+        }
 
-            PachetePresenter presenter = new PachetePresenter(this);
-            
->>>>>>> 828e088114de08e4732d6fb33093224112fda8ba:Proiect/Form1.cs
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Amsterdam();
+        }
 
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.London();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Paris();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.DubaiC();
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Ankara();
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Budapest();
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Bucharest();
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Bruxelles();
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.BoraBora();
+        }
+
+        private void pictureBox21_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Bali();
+        }
+
+        private void pictureBox20_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Dubai();
+        }
+
+        private void pictureBox22_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Maldives();
         }
     }
-
-
 }
