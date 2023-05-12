@@ -69,6 +69,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
@@ -96,10 +97,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.menuStrip_Destination = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.menuStrip_NoOfNights = new System.Windows.Forms.MenuStrip();
             this.menuStrip_CityOfDeparture = new System.Windows.Forms.MenuStrip();
             this.menuStrip_DepartureDate = new System.Windows.Forms.MenuStrip();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -121,12 +123,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.menuStrip_Destination.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -215,7 +218,7 @@
             this.pictureBox22.Size = new System.Drawing.Size(792, 302);
             this.pictureBox22.TabIndex = 3;
             this.pictureBox22.TabStop = false;
-            this.pictureBox22.Click += new System.EventHandler(this.pictureBox22_Click);
+            this.pictureBox22.Click += new System.EventHandler(this.pictureBox22_Click_1);
             // 
             // pictureBox21
             // 
@@ -225,7 +228,7 @@
             this.pictureBox21.Size = new System.Drawing.Size(601, 299);
             this.pictureBox21.TabIndex = 2;
             this.pictureBox21.TabStop = false;
-            this.pictureBox21.Click += new System.EventHandler(this.pictureBox21_Click);
+            this.pictureBox21.Click += new System.EventHandler(this.pictureBox21_Click_1);
             // 
             // pictureBox20
             // 
@@ -235,7 +238,7 @@
             this.pictureBox20.Size = new System.Drawing.Size(603, 302);
             this.pictureBox20.TabIndex = 1;
             this.pictureBox20.TabStop = false;
-            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
+            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click_1);
             // 
             // pictureBox19
             // 
@@ -325,7 +328,7 @@
             this.pictureBox18.Size = new System.Drawing.Size(573, 276);
             this.pictureBox18.TabIndex = 3;
             this.pictureBox18.TabStop = false;
-            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click_1);
             // 
             // pictureBox17
             // 
@@ -335,7 +338,7 @@
             this.pictureBox17.Size = new System.Drawing.Size(573, 276);
             this.pictureBox17.TabIndex = 2;
             this.pictureBox17.TabStop = false;
-            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click_1);
             // 
             // pictureBox16
             // 
@@ -345,7 +348,7 @@
             this.pictureBox16.Size = new System.Drawing.Size(573, 276);
             this.pictureBox16.TabIndex = 1;
             this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click_1);
             // 
             // pictureBox15
             // 
@@ -355,7 +358,7 @@
             this.pictureBox15.Size = new System.Drawing.Size(573, 276);
             this.pictureBox15.TabIndex = 0;
             this.pictureBox15.TabStop = false;
-            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click_1);
             // 
             // tabPage2
             // 
@@ -390,6 +393,7 @@
             this.tabPage2.Size = new System.Drawing.Size(1639, 923);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Circuits";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label24
             // 
@@ -550,7 +554,7 @@
             this.pictureBox14.Size = new System.Drawing.Size(417, 158);
             this.pictureBox14.TabIndex = 11;
             this.pictureBox14.TabStop = false;
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click_1);
             // 
             // pictureBox13
             // 
@@ -560,7 +564,7 @@
             this.pictureBox13.Size = new System.Drawing.Size(443, 319);
             this.pictureBox13.TabIndex = 9;
             this.pictureBox13.TabStop = false;
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click_1);
             // 
             // pictureBox12
             // 
@@ -570,7 +574,7 @@
             this.pictureBox12.Size = new System.Drawing.Size(545, 255);
             this.pictureBox12.TabIndex = 8;
             this.pictureBox12.TabStop = false;
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click_1);
             // 
             // pictureBox11
             // 
@@ -580,7 +584,7 @@
             this.pictureBox11.Size = new System.Drawing.Size(417, 154);
             this.pictureBox11.TabIndex = 7;
             this.pictureBox11.TabStop = false;
-            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click_1);
             // 
             // pictureBox10
             // 
@@ -590,7 +594,7 @@
             this.pictureBox10.Size = new System.Drawing.Size(315, 382);
             this.pictureBox10.TabIndex = 6;
             this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click_1);
             // 
             // pictureBox9
             // 
@@ -600,7 +604,7 @@
             this.pictureBox9.Size = new System.Drawing.Size(315, 255);
             this.pictureBox9.TabIndex = 5;
             this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click_1);
             // 
             // pictureBox8
             // 
@@ -610,7 +614,7 @@
             this.pictureBox8.Size = new System.Drawing.Size(315, 258);
             this.pictureBox8.TabIndex = 4;
             this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click_1);
             // 
             // pictureBox7
             // 
@@ -620,7 +624,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(315, 192);
             this.pictureBox7.TabIndex = 3;
             this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click_1);
             // 
             // pictureBox6
             // 
@@ -631,6 +635,23 @@
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.AllowDrop = true;
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(16, 113);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1647, 962);
+            this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
             // 
@@ -972,12 +993,26 @@
             this.menuStrip_Destination.BackColor = System.Drawing.Color.White;
             this.menuStrip_Destination.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip_Destination.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip_Destination.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripTextBox1});
             this.menuStrip_Destination.Location = new System.Drawing.Point(93, 79);
             this.menuStrip_Destination.Name = "menuStrip_Destination";
-            this.menuStrip_Destination.Size = new System.Drawing.Size(202, 24);
+            this.menuStrip_Destination.Size = new System.Drawing.Size(124, 31);
             this.menuStrip_Destination.TabIndex = 0;
             this.menuStrip_Destination.Text = "Alege destinatia";
             this.menuStrip_Destination.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_Destination_ItemClicked);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(14, 27);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
             // 
             // menuStrip_NoOfNights
             // 
@@ -1014,23 +1049,6 @@
             this.menuStrip_DepartureDate.Size = new System.Drawing.Size(202, 24);
             this.menuStrip_DepartureDate.TabIndex = 2;
             this.menuStrip_DepartureDate.Text = "-Alege data-";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.AllowDrop = true;
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(16, 113);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1647, 962);
-            this.tabControl1.TabIndex = 4;
             // 
             // MainPage
             // 
@@ -1070,13 +1088,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.menuStrip_Destination.ResumeLayout(false);
+            this.menuStrip_Destination.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1123,7 +1143,9 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -1148,12 +1170,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.MenuStrip menuStrip_Destination;
         private System.Windows.Forms.MenuStrip menuStrip_NoOfNights;
         private System.Windows.Forms.MenuStrip menuStrip_CityOfDeparture;
         private System.Windows.Forms.MenuStrip menuStrip_DepartureDate;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MenuStrip menuStrip_Destination;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }
 

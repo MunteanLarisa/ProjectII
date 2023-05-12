@@ -46,5 +46,6 @@ namespace Proiect.Views
         {
             get; set;
         }
+        bool pictureBox6_Click { get; set; }
     }
 }

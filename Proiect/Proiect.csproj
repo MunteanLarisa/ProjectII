@@ -97,7 +97,7 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Circuits.cs" />
+    <Compile Include="Models\CircuitsModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MainPage.cs" />
     <Compile Include="Models\Register.cs" />

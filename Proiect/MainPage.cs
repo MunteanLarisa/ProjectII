@@ -17,7 +17,7 @@ namespace Proiect
     public partial class MainPage : Form, IMainPage
     {
 
-
+   
         public MainPage()
 
         {
@@ -82,24 +82,15 @@ namespace Proiect
         public int Rooms { get => Convert.ToInt32(menuStrip_NoOfRooms); set => menuStrip_NoOfRooms.ToString(); }
         public int Adults { get => Convert.ToInt32(menuStrip_Adults); set => menuStrip_Adults.ToString(); }
         public int Children { get => Convert.ToInt32(menuStrip_Children); set => menuStrip_Children.ToString(); }
-        public string Pet { get => menuStrip_PetFriendly.Text; set => menuStrip_PetFriendly.Text=value.ToString(); }
+        public string Pet { get => menuStrip_PetFriendly.Text; set => menuStrip_PetFriendly.Text = value.ToString(); }
+        bool IMainPage.pictureBox6_Click { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         private void menuStrip_Destination_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
  
             MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Destination();
+            presenter.Destinations_Menu();
             MessageBox.Show(e.ClickedItem.Text);
-            //switch (presenter)
-            //{
-            //  case "menu name 1":
-            //do stuff
-            //    break;
-
-            //  case "menu name 2":
-            // do stuff
-            //    break;
-            //}
         }
 
         private void MainPage_Load(object sender, EventArgs e)
@@ -108,108 +99,120 @@ namespace Proiect
             cn2.Open();
 
             cn2.Close();
+
+            //MainPagePresenter presenter = new MainPagePresenter(this);
+            //presenter.Destination();
+         
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        public void pictureBox6_Click(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Barcelona();
+            
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void pictureBox7_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Belgrade();
         }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
+        private void pictureBox14_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Oslo();
         }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
+        private void pictureBox13_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.AbuDhabi();
         }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
+        private void pictureBox8_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Prague();
         }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
+        private void pictureBox10_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Amsterdam();
         }
-
-        private void pictureBox11_Click(object sender, EventArgs e)
+        private void pictureBox11_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.London();
         }
 
-        private void pictureBox9_Click(object sender, EventArgs e)
+        private void pictureBox9_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Paris();
         }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
+        private void pictureBox12_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.DubaiC();
         }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
+        private void pictureBox15_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Ankara();
         }
-
-        private void pictureBox18_Click(object sender, EventArgs e)
+        private void pictureBox18_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Budapest();
         }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
+        private void pictureBox16_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Bucharest();
         }
-
-        private void pictureBox17_Click(object sender, EventArgs e)
+        private void pictureBox17_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Bruxelles();
         }
 
+    
         private void pictureBox19_Click(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.BoraBora();
         }
 
-        private void pictureBox21_Click(object sender, EventArgs e)
+        private void pictureBox21_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Bali();
         }
 
-        private void pictureBox20_Click(object sender, EventArgs e)
+        private void pictureBox20_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Dubai();
         }
 
-        private void pictureBox22_Click(object sender, EventArgs e)
+        private void pictureBox22_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Maldives();
+        }
+     
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Destinations_Menu();
+           
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+            //if (pictureBox6.Click)
+           // {
+
+            //}
         }
     }
 }
