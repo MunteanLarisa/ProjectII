@@ -11,10 +11,9 @@ using System.Data;
 
 namespace Proiect.Presenters
 {
-    class MainPagePresenter
+    class MainPagePresenter 
     {
-        IMainPage mainPageView;
-        ICircuits circuitsView;
+         IMainPage mainPageView;
 
         public MenuStrip MainMenuStrip { get; private set; }
 
@@ -40,17 +39,13 @@ namespace Proiect.Presenters
         }
         public void Destinations_Menu()
         {
-            
+           
         }
 
         public void Barcelona()
         {   
             Circuits c = new Circuits();
             c.Show();
-        }
-        public static int IdTable()
-        {
-            return 5;
         }
         public void Belgrade()
         {
@@ -132,7 +127,19 @@ namespace Proiect.Presenters
             ExoticCircuits e = new ExoticCircuits();
             e.Show();
         }
+        public void Search()
+        {
+            Packages p = new Packages();
+            p.Show();
+        }
+        public void Departure_ClujNapoca()
+        {
 
+            //SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
+            //myCon.Open();
+           // SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM PLECARE WHERE Oras = CLUJ-NAPOCA", myCon);
+           // myCon.Close();
+        } 
     }
 }
 

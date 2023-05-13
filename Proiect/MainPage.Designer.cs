@@ -56,7 +56,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.label_Barcelona = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -102,6 +102,9 @@
             this.menuStrip_NoOfNights = new System.Windows.Forms.MenuStrip();
             this.menuStrip_CityOfDeparture = new System.Windows.Forms.MenuStrip();
             this.menuStrip_DepartureDate = new System.Windows.Forms.MenuStrip();
+            this.clujNapocaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clujNapocaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bucurestiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -130,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip_Destination.SuspendLayout();
+            this.menuStrip_CityOfDeparture.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -372,7 +376,7 @@
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.label_Barcelona);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.menuStrip1);
@@ -499,18 +503,18 @@
             this.label17.TabIndex = 13;
             this.label17.Text = "Prague";
             // 
-            // label16
+            // label_Barcelona
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.MediumPurple;
-            this.label16.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(43, 106);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(122, 29);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Barcelona";
+            this.label_Barcelona.AutoSize = true;
+            this.label_Barcelona.BackColor = System.Drawing.Color.MediumPurple;
+            this.label_Barcelona.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Barcelona.ForeColor = System.Drawing.Color.White;
+            this.label_Barcelona.Location = new System.Drawing.Point(43, 106);
+            this.label_Barcelona.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_Barcelona.Name = "label_Barcelona";
+            this.label_Barcelona.Size = new System.Drawing.Size(122, 29);
+            this.label_Barcelona.TabIndex = 12;
+            this.label_Barcelona.Text = "Barcelona";
             // 
             // label15
             // 
@@ -634,7 +638,6 @@
             this.pictureBox6.Size = new System.Drawing.Size(315, 315);
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // tabControl1
             // 
@@ -706,6 +709,7 @@
             this.button1.TabIndex = 28;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label33
             // 
@@ -1001,7 +1005,6 @@
             this.menuStrip_Destination.Size = new System.Drawing.Size(124, 31);
             this.menuStrip_Destination.TabIndex = 0;
             this.menuStrip_Destination.Text = "Alege destinatia";
-            this.menuStrip_Destination.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_Destination_ItemClicked);
             // 
             // toolStripMenuItem1
             // 
@@ -1032,9 +1035,11 @@
             this.menuStrip_CityOfDeparture.BackColor = System.Drawing.Color.White;
             this.menuStrip_CityOfDeparture.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip_CityOfDeparture.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip_CityOfDeparture.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clujNapocaToolStripMenuItem});
             this.menuStrip_CityOfDeparture.Location = new System.Drawing.Point(93, 162);
             this.menuStrip_CityOfDeparture.Name = "menuStrip_CityOfDeparture";
-            this.menuStrip_CityOfDeparture.Size = new System.Drawing.Size(202, 24);
+            this.menuStrip_CityOfDeparture.Size = new System.Drawing.Size(284, 28);
             this.menuStrip_CityOfDeparture.TabIndex = 1;
             this.menuStrip_CityOfDeparture.Text = "Alege orasul";
             // 
@@ -1049,6 +1054,28 @@
             this.menuStrip_DepartureDate.Size = new System.Drawing.Size(202, 24);
             this.menuStrip_DepartureDate.TabIndex = 2;
             this.menuStrip_DepartureDate.Text = "-Alege data-";
+            // 
+            // clujNapocaToolStripMenuItem
+            // 
+            this.clujNapocaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clujNapocaToolStripMenuItem1,
+            this.bucurestiToolStripMenuItem});
+            this.clujNapocaToolStripMenuItem.Name = "clujNapocaToolStripMenuItem";
+            this.clujNapocaToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
+            this.clujNapocaToolStripMenuItem.Text = "Available cities:";
+            // 
+            // clujNapocaToolStripMenuItem1
+            // 
+            this.clujNapocaToolStripMenuItem1.Name = "clujNapocaToolStripMenuItem1";
+            this.clujNapocaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.clujNapocaToolStripMenuItem1.Text = "Cluj-Napoca";
+            this.clujNapocaToolStripMenuItem1.Click += new System.EventHandler(this.clujNapocaToolStripMenuItem1_Click);
+            // 
+            // bucurestiToolStripMenuItem
+            // 
+            this.bucurestiToolStripMenuItem.Name = "bucurestiToolStripMenuItem";
+            this.bucurestiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bucurestiToolStripMenuItem.Text = "Bucuresti";
             // 
             // MainPage
             // 
@@ -1097,6 +1124,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip_Destination.ResumeLayout(false);
             this.menuStrip_Destination.PerformLayout();
+            this.menuStrip_CityOfDeparture.ResumeLayout(false);
+            this.menuStrip_CityOfDeparture.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1130,7 +1159,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label_Barcelona;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -1176,6 +1205,9 @@
         private System.Windows.Forms.MenuStrip menuStrip_Destination;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem clujNapocaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clujNapocaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bucurestiToolStripMenuItem;
     }
 }
 

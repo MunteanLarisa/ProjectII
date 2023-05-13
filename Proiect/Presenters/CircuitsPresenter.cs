@@ -23,14 +23,15 @@ namespace Proiect.Presenters
         }
         public void Barcelona()
         {
+                 
                 SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
                 myCon.Open();
-                SqlDataAdapter daBarcelona = new SqlDataAdapter("SELECT * FROM ACTIVITATI WHERE ID = '" + MainPagePresenter.IdTable() + "'", myCon);
+                SqlDataAdapter daBarcelona = new SqlDataAdapter("SELECT * FROM ACTIVITATI WHERE ID = '" + MainPage.MouseButtons + "'", myCon);
                 DataTable dtBarcelona = new DataTable();
                 daBarcelona.Fill(dtBarcelona);
                 circuitsView.gridView = dtBarcelona;
                 myCon.Close();
             
-        }  
+        }
     }
 }

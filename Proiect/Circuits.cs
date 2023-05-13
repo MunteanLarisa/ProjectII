@@ -39,16 +39,17 @@ namespace Proiect
 
         private void Circuits_Load(object sender, EventArgs e)
         {
-            SqlConnection cn2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
-            cn2.Open();
-            CircuitsPresenter presenter = new CircuitsPresenter(this);
-            presenter.Barcelona();
-            cn2.Close();
+           // CircuitsPresenter presenter = new CircuitsPresenter(this);
+            //if (MainPagePresenter.IdTableBa() == 5)
+            //{
+            //    presenter.Barcelona();
+           // }
+           // if (MainPagePresenter.IdTableBe() == 11)
+           // {
+           //     presenter.Belgrade();
+           // }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
+       
     }
 }

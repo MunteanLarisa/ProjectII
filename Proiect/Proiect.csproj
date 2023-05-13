@@ -100,6 +100,7 @@
     <Compile Include="Models\CircuitsModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MainPage.cs" />
+    <Compile Include="Models\PackagesModel.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Packages.cs">
       <SubType>Form</SubType>
@@ -110,6 +111,7 @@
     <Compile Include="Presenters\CircuitsPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainPagePresenter.cs" />
+    <Compile Include="Presenters\PackagesPresenter.cs" />
     <Compile Include="Presenters\RegisterPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +124,7 @@
     <Compile Include="Views\ICircuits.cs" />
     <Compile Include="Views\ILogin.cs" />
     <Compile Include="Views\IMainPage.cs" />
+    <Compile Include="Views\IPackages.cs" />
     <Compile Include="Views\IRegister.cs" />
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>Checkout.cs</DependentUpon>

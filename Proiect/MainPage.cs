@@ -83,15 +83,17 @@ namespace Proiect
         public int Adults { get => Convert.ToInt32(menuStrip_Adults); set => menuStrip_Adults.ToString(); }
         public int Children { get => Convert.ToInt32(menuStrip_Children); set => menuStrip_Children.ToString(); }
         public string Pet { get => menuStrip_PetFriendly.Text; set => menuStrip_PetFriendly.Text = value.ToString(); }
-        bool IMainPage.pictureBox6_Click { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        private void menuStrip_Destination_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
- 
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Destinations_Menu();
-            MessageBox.Show(e.ClickedItem.Text);
-        }
+        //bool IMainPage.pictureBox
+        //{
+        //   get
+        //   {
+        //    return Convert.ToBoolean(pictureBox6);
+        // }
+        //  set => Convert.ToBoolean(pictureBox6);
+        // }
+
+
 
         private void MainPage_Load(object sender, EventArgs e)
         {
@@ -99,19 +101,17 @@ namespace Proiect
             cn2.Open();
 
             cn2.Close();
-
             //MainPagePresenter presenter = new MainPagePresenter(this);
             //presenter.Destination();
          
         }
 
-        public void pictureBox6_Click(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Barcelona();
-            
         }
-
+        
         private void pictureBox7_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
@@ -213,6 +213,18 @@ namespace Proiect
            // {
 
             //}
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Search();
+        }
+
+        private void clujNapocaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Departure_ClujNapoca();
         }
     }
 }
