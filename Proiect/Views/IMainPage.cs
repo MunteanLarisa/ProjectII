@@ -51,5 +51,25 @@ namespace Proiect.Views
         {
             get; set;
         }
+        bool Paris_submenu
+        {
+            get;set;
+        }
+        bool Milano_submenu
+        {
+            get; set;
+        }
+        bool Barcelona_submenu { get; set; }
+        bool London_submenu { get; set; }
+        bool Berlin_submenu { get; set; }
+        bool AbuDhabi_submenu { get; set; }
+        bool Amsterdam_submenu { get; set; }
+        bool Ankara_submenu { get; set; }
+        bool Belgrad_submenu { get; set; }
+        bool Bruxelles_submenu { get; set; }
+        bool Budapest_submenu { get; set; }
+        bool Copenhaga_submenu { get; set; }
+        bool Oslo_submenu { get; set; }
+        bool Praga_submenu { get; set; }
     }
 }

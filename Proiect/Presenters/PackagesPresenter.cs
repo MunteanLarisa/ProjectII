@@ -14,9 +14,15 @@ namespace Proiect.Presenters
     class PackagesPresenter
     {
         IPackages packagesView;
+        public static IMainPage mainPageView;
         public PackagesPresenter(IPackages view)
         {
             packagesView = view;
+        }
+        public PackagesPresenter(IPackages view, IMainPage view2)
+        {
+            packagesView = view;
+            mainPageView = view2;
         }
         public void Db()
         {

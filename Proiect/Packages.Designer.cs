@@ -40,18 +40,18 @@ namespace Proiect
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 142);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 133);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(516, 528);
+            this.dataGridView1.Size = new System.Drawing.Size(490, 528);
             this.dataGridView1.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proiect.Properties.Resources.logi1;
             this.pictureBox1.InitialImage = global::Proiect.Properties.Resources.logi;
-            this.pictureBox1.Location = new System.Drawing.Point(-119, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(-94, 24);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(597, 91);

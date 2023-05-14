@@ -17,198 +17,60 @@ namespace Proiect
     public partial class MainPage : Form, IMainPage
     {
 
-   
+
         public MainPage()
 
         {
             InitializeComponent();
         }
 
-        public string Destination_Paris 
-        {
-            get
-            {
-                return parisToolStripMenuItem.Text;
-            }
-            set
-            {
-                availableDestinationsToolStripMenuItem.Text = value;
-            }
-        }
-        public string DepartureCity
-        {
-            get
-            {
-                return menuStrip_Departure.Text;
-            }
-            set
-            {
-                menuStrip_Departure.Text = value;
-            }
-        }
-        public string Transport
-        {
-            get
-            {
-                return menuStrip_Transport.Text;
-            }
-            set
-            {
-                menuStrip_Transport.Text = value;
-            }
-        }
-        public DateTime Date
-        {
-            get
-            {
-                return Convert.ToDateTime(menuStrip_DepartureDate.Text);
-            }
-            set
-            {
-                menuStrip_DepartureDate.Text = value.ToString();
-            }
-        }
-        public int Nights
-        {
-            get
-            {
-                return Convert.ToInt32(menuStrip_NoOfNights.Text);
-            }
-            set
-            {
-                menuStrip_NoOfNights.Text = value.ToString();
-            }
-        }
+        public string Destination_Paris { get => parisToolStripMenuItem.Text; set => availableDestinationsToolStripMenuItem.Text = value; }
+        public string DepartureCity{ get => menuStrip_Departure.Text; set =>  menuStrip_Departure.Text = value; }
+        public string Transport { get => menuStrip_Transport.Text; set => menuStrip_Transport.Text = value; }
+        public DateTime Date{ get => Convert.ToDateTime(menuStrip_DepartureDate.Text); set => menuStrip_DepartureDate.Text = value.ToString();}
+        public int Nights{ get => Convert.ToInt32(menuStrip_NoOfNights.Text); set => menuStrip_NoOfNights.Text = value.ToString();}
         public int Rooms { get => Convert.ToInt32(menuStrip_NoOfRooms); set => menuStrip_NoOfRooms.ToString(); }
         public int Adults { get => Convert.ToInt32(menuStrip_Adults); set => menuStrip_Adults.ToString(); }
         public int Children { get => Convert.ToInt32(menuStrip_Children); set => menuStrip_Children.ToString(); }
         public string Pet { get => menuStrip_PetFriendly.Text; set => menuStrip_PetFriendly.Text = value.ToString(); }
         public int Budget { get => Convert.ToInt32(menuStrip_bugete); set => menuStrip_bugete.ToString(); }
-
-        //bool IMainPage.pictureBox
-        //{
-        //   get
-        //   {
-        //    return Convert.ToBoolean(pictureBox6);
-        // }
-        //  set => Convert.ToBoolean(pictureBox6);
-        // }
-
+        public bool Paris_submenu { get => parisToolStripMenuItem.Checked; set => parisToolStripMenuItem.ToString();}
+        public bool Milano_submenu { get => milanoToolStripMenuItem.Checked; set => milanoToolStripMenuItem.ToString(); }
+        public bool Barcelona_submenu { get => barcelonaToolStripMenuItem.Checked; set => barcelonaToolStripMenuItem.ToString(); }
+        public bool London_submenu { get => londonToolStripMenuItem.Checked; set => londonToolStripMenuItem.ToString(); }
+        public bool Berlin_submenu { get => berlinToolStripMenuItem.Checked; set => berlinToolStripMenuItem.ToString(); }
+        public bool AbuDhabi_submenu { get => abuDhabiToolStripMenuItem.Checked; set =>abuDhabiToolStripMenuItem.ToString(); }
+        public bool Amsterdam_submenu { get => amsterdamToolStripMenuItem.Checked; set => amsterdamToolStripMenuItem.ToString(); }
+        public bool Ankara_submenu { get => ankaraToolStripMenuItem.Checked; set => ankaraToolStripMenuItem.ToString(); }
+        public bool Belgrad_submenu { get => belgradToolStripMenuItem.Checked; set => belgradToolStripMenuItem.ToString(); }
+        public bool Bruxelles_submenu { get => bruxellesToolStripMenuItem.Checked; set =>bruxellesToolStripMenuItem.ToString(); }
+        public bool Budapest_submenu { get => budapestToolStripMenuItem.Checked; set => budapestToolStripMenuItem.ToString(); }
+        public bool Copenhaga_submenu { get => copenhagaToolStripMenuItem.Checked; set => copenhagaToolStripMenuItem.ToString(); }
+        public bool Oslo_submenu { get => osloToolStripMenuItem.Checked; set => osloToolStripMenuItem.ToString(); }
+        public bool Praga_submenu { get => pragaToolStripMenuItem.Checked; set => pragaToolStripMenuItem.ToString(); }
 
 
         private void MainPage_Load(object sender, EventArgs e)
         {
             SqlConnection cn2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
             cn2.Open();
-            
             cn2.Close();
-            //MainPagePresenter presenter = new MainPagePresenter(this);
-            //presenter.Destination();
-         
         }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            
-        }
-        
-        private void pictureBox9_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Paris();
-        }
-        private void pictureBox15_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Ankara();
-        }
-        private void pictureBox18_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Budapest();
-        }
-        private void pictureBox16_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Bucharest();
-        }
-        private void pictureBox17_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Bruxelles();
-        }
-
-    
-        private void pictureBox19_Click(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.BoraBora();
-        }
-
-        private void pictureBox21_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Bali();
-        }
-
-        private void pictureBox20_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Dubai();
-        }
-
-        private void pictureBox22_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Maldives();
-        }
-     
-
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-            //if (pictureBox6.Click)
-           // {
-
-            //}
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Search();
         }
-
-        private void clujNapocaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            //MainPagePresenter presenter = new MainPagePresenter(this);
-            //presenter.Departure_ClujNapoca();
-        }
-
         private void parisToolStripMenuItem_Click(object sender, EventArgs e)
         {
             parisToolStripMenuItem.Checked = true;
             
         }
-
-        private void availableDestinationsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-              //if (parisToolStripMenuItem.Checked == true)
-              //{
-              //    Destination_PA = "Paris";
-              //}
-       }
-
         private void milanoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             milanoToolStripMenuItem.Checked = true;
      
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             parisToolStripMenuItem.Checked = false;
@@ -295,7 +157,10 @@ namespace Proiect
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            carToolStripMenuItem.Checked = false;
+            planeToolStripMenuItem.Checked = false;
+            trainToolStripMenuItem.Checked = false;
+            busToolStripMenuItem.Checked = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -332,6 +197,50 @@ namespace Proiect
         {
             Circuits c = new Circuits();
             c.Show();
+        }
+
+        private void carToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            carToolStripMenuItem.Checked = true;
+        }
+
+        private void planeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            planeToolStripMenuItem.Checked = true;
+        }
+
+        private void trainToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            trainToolStripMenuItem.Checked = true;
+        }
+
+        private void busToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            busToolStripMenuItem.Checked = true;
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            HotDeals_Ankara h = new HotDeals_Ankara();
+            h.Show();
+        }
+
+        private void pictureBox18_Click(object sender, EventArgs e)
+        {
+            HotDeals_Budapest h = new HotDeals_Budapest();
+            h.Show();
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            HotDeals_Bucharest h = new HotDeals_Bucharest();
+            h.Show();
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            HotDeals_Bruxelles h = new HotDeals_Bruxelles();
+            h.Show();
         }
     }
 }

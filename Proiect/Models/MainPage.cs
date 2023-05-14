@@ -49,6 +49,25 @@ namespace Proiect.Models
         {
             get; set;
         }
-
+        public bool Paris_submenu
+        {
+            get;set;
+        }
+        public bool Milano_submenu
+        {
+            get; set;
+        }
+        public bool Barcelona_submenu { get; set; }
+        public bool London_submenu { get ; set; }
+        public bool Berlin_submenu { get ; set; }
+        public bool AbuDhabi_submenu { get; set; }
+        public bool Amsterdam_submenu { get; set ; }
+        public bool Ankara_submenu { get; set ; }
+        public bool Belgrad_submenu { get ; set; }
+        public bool Bruxelles_submenu { get; set ; }
+        public bool Budapest_submenu { get ; set ; }
+        public bool Copenhaga_submenu { get ; set; }
+        public bool Oslo_submenu { get ; set ; }
+        public bool Praga_submenu { get ; set ; }
     }
 }

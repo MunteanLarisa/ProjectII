@@ -287,7 +287,6 @@
             this.pictureBox22.Size = new System.Drawing.Size(792, 302);
             this.pictureBox22.TabIndex = 3;
             this.pictureBox22.TabStop = false;
-            this.pictureBox22.Click += new System.EventHandler(this.pictureBox22_Click_1);
             // 
             // pictureBox21
             // 
@@ -297,7 +296,6 @@
             this.pictureBox21.Size = new System.Drawing.Size(601, 299);
             this.pictureBox21.TabIndex = 2;
             this.pictureBox21.TabStop = false;
-            this.pictureBox21.Click += new System.EventHandler(this.pictureBox21_Click_1);
             // 
             // pictureBox20
             // 
@@ -307,7 +305,6 @@
             this.pictureBox20.Size = new System.Drawing.Size(603, 302);
             this.pictureBox20.TabIndex = 1;
             this.pictureBox20.TabStop = false;
-            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click_1);
             // 
             // pictureBox19
             // 
@@ -317,7 +314,6 @@
             this.pictureBox19.Size = new System.Drawing.Size(792, 299);
             this.pictureBox19.TabIndex = 0;
             this.pictureBox19.TabStop = false;
-            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
             // 
             // tabPage3
             // 
@@ -397,7 +393,7 @@
             this.pictureBox18.Size = new System.Drawing.Size(573, 276);
             this.pictureBox18.TabIndex = 3;
             this.pictureBox18.TabStop = false;
-            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click_1);
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
             // 
             // pictureBox17
             // 
@@ -407,7 +403,7 @@
             this.pictureBox17.Size = new System.Drawing.Size(573, 276);
             this.pictureBox17.TabIndex = 2;
             this.pictureBox17.TabStop = false;
-            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click_1);
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
             // 
             // pictureBox16
             // 
@@ -417,7 +413,7 @@
             this.pictureBox16.Size = new System.Drawing.Size(573, 276);
             this.pictureBox16.TabIndex = 1;
             this.pictureBox16.TabStop = false;
-            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click_1);
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
             // pictureBox15
             // 
@@ -427,7 +423,7 @@
             this.pictureBox15.Size = new System.Drawing.Size(573, 276);
             this.pictureBox15.TabIndex = 0;
             this.pictureBox15.TabStop = false;
-            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click_1);
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
             // 
             // tabPage2
             // 
@@ -462,7 +458,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1639, 923);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Circuits";
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label24
             // 
@@ -614,7 +609,7 @@
             this.menuStrip_bugete});
             this.menuStrip1.Location = new System.Drawing.Point(1277, 40);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(218, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(68, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -629,37 +624,36 @@
             this.menuStrip_bugete.Name = "menuStrip_bugete";
             this.menuStrip_bugete.Size = new System.Drawing.Size(60, 24);
             this.menuStrip_bugete.Text = "From:";
-   
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(116, 26);
             this.toolStripMenuItem2.Text = "100";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(116, 26);
             this.toolStripMenuItem3.Text = "300";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(116, 26);
             this.toolStripMenuItem4.Text = "500";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(116, 26);
             this.toolStripMenuItem5.Text = "700";
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(116, 26);
             this.toolStripMenuItem6.Text = "900";
             // 
             // pictureBox14
@@ -715,7 +709,6 @@
             this.pictureBox9.Size = new System.Drawing.Size(315, 255);
             this.pictureBox9.TabIndex = 5;
             this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click_1);
             // 
             // pictureBox8
             // 
@@ -1305,26 +1298,30 @@
             // carToolStripMenuItem
             // 
             this.carToolStripMenuItem.Name = "carToolStripMenuItem";
-            this.carToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.carToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.carToolStripMenuItem.Text = "Car";
+            this.carToolStripMenuItem.Click += new System.EventHandler(this.carToolStripMenuItem_Click);
             // 
             // planeToolStripMenuItem
             // 
             this.planeToolStripMenuItem.Name = "planeToolStripMenuItem";
-            this.planeToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.planeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.planeToolStripMenuItem.Text = "Plane";
+            this.planeToolStripMenuItem.Click += new System.EventHandler(this.planeToolStripMenuItem_Click);
             // 
             // trainToolStripMenuItem
             // 
             this.trainToolStripMenuItem.Name = "trainToolStripMenuItem";
-            this.trainToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.trainToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.trainToolStripMenuItem.Text = "Train";
+            this.trainToolStripMenuItem.Click += new System.EventHandler(this.trainToolStripMenuItem_Click);
             // 
             // busToolStripMenuItem
             // 
             this.busToolStripMenuItem.Name = "busToolStripMenuItem";
-            this.busToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.busToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.busToolStripMenuItem.Text = "Bus";
+            this.busToolStripMenuItem.Click += new System.EventHandler(this.busToolStripMenuItem_Click);
             // 
             // label4
             // 
@@ -1476,7 +1473,6 @@
             this.availableDestinationsToolStripMenuItem.Name = "availableDestinationsToolStripMenuItem";
             this.availableDestinationsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.availableDestinationsToolStripMenuItem.Text = "Choose:";
-            this.availableDestinationsToolStripMenuItem.Click += new System.EventHandler(this.availableDestinationsToolStripMenuItem_Click);
             // 
             // parisToolStripMenuItem
             // 
@@ -1600,13 +1596,13 @@
             // clujNapocaToolStripMenuItem
             // 
             this.clujNapocaToolStripMenuItem.Name = "clujNapocaToolStripMenuItem";
-            this.clujNapocaToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.clujNapocaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.clujNapocaToolStripMenuItem.Text = "Cluj-Napoca";
             // 
             // bucurestiToolStripMenuItem1
             // 
             this.bucurestiToolStripMenuItem1.Name = "bucurestiToolStripMenuItem1";
-            this.bucurestiToolStripMenuItem1.Size = new System.Drawing.Size(175, 26);
+            this.bucurestiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.bucurestiToolStripMenuItem1.Text = "Bucuresti";
             // 
             // MainPage

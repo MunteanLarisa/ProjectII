@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="Models\CircuitsModel.cs" />
     <Compile Include="Models\HotDealsAnkaraModel.cs" />
+    <Compile Include="Models\HotDealsBruxellesModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MainPage.cs" />
     <Compile Include="Models\PackagesModel.cs" />
@@ -129,6 +130,7 @@
     </Compile>
     <Compile Include="Presenters\CircuitsPresenter.cs" />
     <Compile Include="Presenters\HotDealsAnkaraPresenter.cs" />
+    <Compile Include="Presenters\HotDealsBruxellesPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainPagePresenter.cs" />
     <Compile Include="Presenters\PackagesPresenter.cs" />
@@ -143,6 +145,7 @@
     </Compile>
     <Compile Include="Views\ICircuits.cs" />
     <Compile Include="Views\IHotDealsAnkara.cs" />
+    <Compile Include="Views\IHotDealsBruxelles.cs" />
     <Compile Include="Views\ILogin.cs" />
     <Compile Include="Views\IMainPage.cs" />
     <Compile Include="Views\IPackages.cs" />
