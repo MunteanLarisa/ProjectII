@@ -9,7 +9,7 @@ namespace Proiect.Models
 {
     class MainPage
     {
-        public string Destination
+        public string Destination_Paris
         {
             get; set;
         }
@@ -45,6 +45,10 @@ namespace Proiect.Models
         {
             get; set;
         }
-      
+        public int Budget
+        {
+            get; set;
+        }
+
     }
 }

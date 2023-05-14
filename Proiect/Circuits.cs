@@ -39,15 +39,8 @@ namespace Proiect
 
         private void Circuits_Load(object sender, EventArgs e)
         {
-           // CircuitsPresenter presenter = new CircuitsPresenter(this);
-            //if (MainPagePresenter.IdTableBa() == 5)
-            //{
-            //    presenter.Barcelona();
-           // }
-           // if (MainPagePresenter.IdTableBe() == 11)
-           // {
-           //     presenter.Belgrade();
-           // }
+           CircuitsPresenter presenter = new CircuitsPresenter(this);
+           presenter.Budget();
         }
 
        

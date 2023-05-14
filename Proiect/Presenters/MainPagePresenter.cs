@@ -14,6 +14,7 @@ namespace Proiect.Presenters
     class MainPagePresenter 
     {
          IMainPage mainPageView;
+         IPackages packagesView;
 
         public MenuStrip MainMenuStrip { get; private set; }
 
@@ -37,74 +38,37 @@ namespace Proiect.Presenters
             //cn.Close();
 
         }
-        public void Destinations_Menu()
-        {
-           
-        }
-
-        public void Barcelona()
-        {   
-            Circuits c = new Circuits();
-            c.Show();
-        }
-        public void Belgrade()
-        {
-            Circuits c = new Circuits();
-            c.Show();
-        }
-        public void Oslo()
-        {
-            Circuits c = new Circuits();
-            c.Show();
-        }
-        public void AbuDhabi()
-        {
-            Circuits c = new Circuits();
-            c.Show();
-        }
-        public void Prague()
-        {
-            Circuits c = new Circuits();
-            c.Show();
-        }
-        public void Amsterdam()
-        {
-            Circuits c = new Circuits();
-            c.Show();
-        }
-        public void London()
-        {
-            Circuits c = new Circuits();
-            c.Show();
-        }
+ 
         public void Paris()
         {
-            Circuits c = new Circuits();
-            c.Show();
-        }
-        public void DubaiC()
-        {
-            Circuits c = new Circuits();
-            c.Show();
+            
+                SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
+                myCon.Open();
+                SqlDataAdapter daParis = new SqlDataAdapter("SELECT * FROM ACTIVITATI WHERE ID = 1", myCon);
+                DataTable dtParis = new DataTable();
+                daParis.Fill(dtParis);
+                packagesView.gridView = dtParis;
+                myCon.Close();
+            
         }
         public void Ankara()
         {
-            HotDeals h = new HotDeals();
+            HotDeals_Ankara h = new HotDeals_Ankara();
             h.Show();
         }
         public void Budapest()
         {
-            HotDeals h = new HotDeals();
-            h.Show();
+            HotDeals_Budapest b = new HotDeals_Budapest();
+            b.Show();
         }
         public void Bucharest()
         {
-            HotDeals h = new HotDeals();
-            h.Show();
+            HotDeals_Bucharest b = new HotDeals_Bucharest();
+            b.Show();
         }
         public void Bruxelles()
         {
-            HotDeals h = new HotDeals();
+            HotDeals_Bruxelles h = new HotDeals_Bruxelles();
             h.Show();
         }
         public void BoraBora()

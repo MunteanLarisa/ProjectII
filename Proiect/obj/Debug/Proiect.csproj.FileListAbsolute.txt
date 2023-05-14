@@ -26,8 +26,11 @@ C:\Users\Larix\Documents\Iulia\ProjectII\Proiect\obj\Debug\Proiect.pdb
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.Checkout.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.Circuits.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.ExoticCircuits.resources
-C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.Login.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.MainPage.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.Packages.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.SignUp.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals_Ankara.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals_Budapest.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals_Bruxelles.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals_Bucharest.resources

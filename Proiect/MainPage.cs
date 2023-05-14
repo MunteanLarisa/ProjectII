@@ -24,37 +24,37 @@ namespace Proiect
             InitializeComponent();
         }
 
-        public string Destination 
+        public string Destination_Paris 
         {
             get
             {
-                return menuStrip_Destination.Text;
+                return parisToolStripMenuItem.Text;
             }
             set
             {
-                menuStrip_Destination.Text = value;
+                availableDestinationsToolStripMenuItem.Text = value;
             }
         }
         public string DepartureCity
         {
             get
             {
-                return menuStrip_CityOfDeparture.Text;
+                return menuStrip_Departure.Text;
             }
             set
             {
-                menuStrip_CityOfDeparture.Text = value;
+                menuStrip_Departure.Text = value;
             }
         }
         public string Transport
         {
             get
             {
-                return menuStrip_MeanOfTransport.Text;
+                return menuStrip_Transport.Text;
             }
             set
             {
-                menuStrip_MeanOfTransport.Text = value;
+                menuStrip_Transport.Text = value;
             }
         }
         public DateTime Date
@@ -83,6 +83,7 @@ namespace Proiect
         public int Adults { get => Convert.ToInt32(menuStrip_Adults); set => menuStrip_Adults.ToString(); }
         public int Children { get => Convert.ToInt32(menuStrip_Children); set => menuStrip_Children.ToString(); }
         public string Pet { get => menuStrip_PetFriendly.Text; set => menuStrip_PetFriendly.Text = value.ToString(); }
+        public int Budget { get => Convert.ToInt32(menuStrip_bugete); set => menuStrip_bugete.ToString(); }
 
         //bool IMainPage.pictureBox
         //{
@@ -99,7 +100,7 @@ namespace Proiect
         {
             SqlConnection cn2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
             cn2.Open();
-
+            
             cn2.Close();
             //MainPagePresenter presenter = new MainPagePresenter(this);
             //presenter.Destination();
@@ -108,50 +109,13 @@ namespace Proiect
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Barcelona();
+            
         }
         
-        private void pictureBox7_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Belgrade();
-        }
-        private void pictureBox14_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Oslo();
-        }
-        private void pictureBox13_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.AbuDhabi();
-        }
-        private void pictureBox8_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Prague();
-        }
-        private void pictureBox10_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Amsterdam();
-        }
-        private void pictureBox11_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.London();
-        }
-
         private void pictureBox9_Click_1(object sender, EventArgs e)
         {
             MainPagePresenter presenter = new MainPagePresenter(this);
             presenter.Paris();
-        }
-        private void pictureBox12_Click_1(object sender, EventArgs e)
-        {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.DubaiC();
         }
         private void pictureBox15_Click_1(object sender, EventArgs e)
         {
@@ -202,9 +166,7 @@ namespace Proiect
 
         private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Destinations_Menu();
-           
+            
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -223,8 +185,153 @@ namespace Proiect
 
         private void clujNapocaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Departure_ClujNapoca();
+            //MainPagePresenter presenter = new MainPagePresenter(this);
+            //presenter.Departure_ClujNapoca();
+        }
+
+        private void parisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            parisToolStripMenuItem.Checked = true;
+            
+        }
+
+        private void availableDestinationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+              //if (parisToolStripMenuItem.Checked == true)
+              //{
+              //    Destination_PA = "Paris";
+              //}
+       }
+
+        private void milanoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            milanoToolStripMenuItem.Checked = true;
+     
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            parisToolStripMenuItem.Checked = false;
+            milanoToolStripMenuItem.Checked = false;
+            barcelonaToolStripMenuItem.Checked = false;
+            londonToolStripMenuItem.Checked = false;
+            berlinToolStripMenuItem.Checked = false;
+            abuDhabiToolStripMenuItem.Checked = false;
+            amsterdamToolStripMenuItem.Checked = false;
+            ankaraToolStripMenuItem.Checked = false;
+            belgradToolStripMenuItem.Checked = false;
+            bruxellesToolStripMenuItem.Checked = false;
+            budapestToolStripMenuItem.Checked = false;
+            copenhagaToolStripMenuItem.Checked = false;
+            osloToolStripMenuItem.Checked = false;
+            pragaToolStripMenuItem.Checked = false;
+          
+        }
+
+        private void barcelonaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            barcelonaToolStripMenuItem.Checked = true;
+        }
+
+        private void londonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            londonToolStripMenuItem.Checked = true;
+        }
+
+        private void berlinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            berlinToolStripMenuItem.Checked = true;
+        }
+
+        private void abuDhabiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abuDhabiToolStripMenuItem.Checked = true;
+        }
+
+        private void amsterdamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            amsterdamToolStripMenuItem.Checked = true;
+        }
+
+        private void ankaraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ankaraToolStripMenuItem.Checked = true;
+        }
+
+        private void belgradToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            belgradToolStripMenuItem.Checked = true;
+        }
+
+        private void bruxellesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bruxellesToolStripMenuItem.Checked = true;
+        }
+
+        private void budapestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            budapestToolStripMenuItem.Checked = true;
+        }
+
+        private void copenhagaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            copenhagaToolStripMenuItem.Checked = true;
+        }
+
+        private void osloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            osloToolStripMenuItem.Checked = true;
+        }
+
+        private void pragaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pragaToolStripMenuItem.Checked = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Circuits c = new Circuits();
+            c.Show();
         }
     }
 }

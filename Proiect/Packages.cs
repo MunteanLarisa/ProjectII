@@ -16,6 +16,7 @@ namespace Proiect
 {
     public partial class Packages : Form, IPackages
     {
+        IMainPage view;
         public Packages()
         {
             InitializeComponent();
@@ -37,8 +38,11 @@ namespace Proiect
         }
         private void Packages_Load(object sender, EventArgs e)
         {
-            PackagesPresenter presenter = new PackagesPresenter(this);
-
+            SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
+            myCon.Open(); 
+            MainPagePresenter presenter = new MainPagePresenter(view);
+            presenter.Paris();
+            myCon.Close();
         }
     }
 }

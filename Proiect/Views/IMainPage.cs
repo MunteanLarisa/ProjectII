@@ -11,7 +11,7 @@ namespace Proiect.Views
 {
     interface IMainPage
     {
-        string Destination
+        string Destination_Paris
         {
             get; set;
         }
@@ -44,6 +44,10 @@ namespace Proiect.Views
             get; set;
         }
         string Pet
+        {
+            get; set;
+        }
+        int Budget
         {
             get; set;
         }

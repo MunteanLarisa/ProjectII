@@ -46,14 +46,14 @@ namespace Proiect
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(25, 175);
+            this.txtUsername.Location = new System.Drawing.Point(40, 190);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(180, 22);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(25, 214);
+            this.txtPassword.Location = new System.Drawing.Point(40, 235);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(180, 22);
             this.txtPassword.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace Proiect
             // 
             // txtConfirmPass
             // 
-            this.txtConfirmPass.Location = new System.Drawing.Point(23, 253);
+            this.txtConfirmPass.Location = new System.Drawing.Point(40, 280);
             this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Size = new System.Drawing.Size(177, 22);
             this.txtConfirmPass.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace Proiect
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 159);
+            this.label1.Location = new System.Drawing.Point(36, 170);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 17);
             this.label1.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace Proiect
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 198);
+            this.label2.Location = new System.Drawing.Point(36, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 17);
             this.label2.TabIndex = 4;
@@ -91,7 +91,7 @@ namespace Proiect
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 237);
+            this.label3.Location = new System.Drawing.Point(37, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 17);
             this.label3.TabIndex = 5;
@@ -100,7 +100,7 @@ namespace Proiect
             // BtnSignUp
             // 
             this.BtnSignUp.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSignUp.Location = new System.Drawing.Point(25, 308);
+            this.BtnSignUp.Location = new System.Drawing.Point(40, 308);
             this.BtnSignUp.Name = "BtnSignUp";
             this.BtnSignUp.Size = new System.Drawing.Size(150, 40);
             this.BtnSignUp.TabIndex = 6;
@@ -110,9 +110,9 @@ namespace Proiect
             // button_Login
             // 
             this.button_Login.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Login.Location = new System.Drawing.Point(23, 354);
+            this.button_Login.Location = new System.Drawing.Point(39, 354);
             this.button_Login.Name = "button_Login";
-            this.button_Login.Size = new System.Drawing.Size(152, 41);
+            this.button_Login.Size = new System.Drawing.Size(150, 57);
             this.button_Login.TabIndex = 7;
             this.button_Login.Text = "Already have an account? Log  in";
             this.button_Login.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@ namespace Proiect
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Vladimir Script", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.HotPink;
-            this.label5.Location = new System.Drawing.Point(27, 34);
+            this.label5.Location = new System.Drawing.Point(30, 24);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(283, 57);
@@ -147,7 +147,7 @@ namespace Proiect
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.HotPink;
-            this.label6.Location = new System.Drawing.Point(225, 76);
+            this.label6.Location = new System.Drawing.Point(233, 81);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(238, 41);
@@ -157,9 +157,9 @@ namespace Proiect
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proiect.Properties.Resources._338338433_193792890067019_2279385592599788582_n__1_1;
-            this.pictureBox2.Location = new System.Drawing.Point(438, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(551, 24);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(423, 473);
+            this.pictureBox2.Size = new System.Drawing.Size(553, 566);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 

@@ -79,11 +79,29 @@
     <Compile Include="ExoticCircuits.Designer.cs">
       <DependentUpon>ExoticCircuits.cs</DependentUpon>
     </Compile>
-    <Compile Include="HotDeals.cs">
+    <Compile Include="HotDeals_Ankara.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HotDeals.Designer.cs">
-      <DependentUpon>HotDeals.cs</DependentUpon>
+    <Compile Include="HotDeals_Ankara.Designer.cs">
+      <DependentUpon>HotDeals_Ankara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotDeals_Bruxelles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotDeals_Bruxelles.Designer.cs">
+      <DependentUpon>HotDeals_Bruxelles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotDeals_Bucharest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotDeals_Bucharest.Designer.cs">
+      <DependentUpon>HotDeals_Bucharest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HotDeals_Budapest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotDeals_Budapest.Designer.cs">
+      <DependentUpon>HotDeals_Budapest.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -98,6 +116,7 @@
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CircuitsModel.cs" />
+    <Compile Include="Models\HotDealsAnkaraModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MainPage.cs" />
     <Compile Include="Models\PackagesModel.cs" />
@@ -109,6 +128,7 @@
       <DependentUpon>Packages.cs</DependentUpon>
     </Compile>
     <Compile Include="Presenters\CircuitsPresenter.cs" />
+    <Compile Include="Presenters\HotDealsAnkaraPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainPagePresenter.cs" />
     <Compile Include="Presenters\PackagesPresenter.cs" />
@@ -122,6 +142,7 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ICircuits.cs" />
+    <Compile Include="Views\IHotDealsAnkara.cs" />
     <Compile Include="Views\ILogin.cs" />
     <Compile Include="Views\IMainPage.cs" />
     <Compile Include="Views\IPackages.cs" />
@@ -135,8 +156,17 @@
     <EmbeddedResource Include="ExoticCircuits.resx">
       <DependentUpon>ExoticCircuits.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HotDeals.resx">
-      <DependentUpon>HotDeals.cs</DependentUpon>
+    <EmbeddedResource Include="HotDeals_Ankara.resx">
+      <DependentUpon>HotDeals_Ankara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotDeals_Bruxelles.resx">
+      <DependentUpon>HotDeals_Bruxelles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotDeals_Bucharest.resx">
+      <DependentUpon>HotDeals_Bucharest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotDeals_Budapest.resx">
+      <DependentUpon>HotDeals_Budapest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
