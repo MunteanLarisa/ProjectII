@@ -106,6 +106,7 @@ namespace Proiect
             this.BtnSignUp.TabIndex = 6;
             this.BtnSignUp.Text = "Sign Up";
             this.BtnSignUp.UseVisualStyleBackColor = true;
+            this.BtnSignUp.Click += new System.EventHandler(this.BtnSignUp_Click_1);
             // 
             // button_Login
             // 

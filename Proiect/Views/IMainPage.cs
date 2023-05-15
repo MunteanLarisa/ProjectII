@@ -71,5 +71,10 @@ namespace Proiect.Views
         bool Copenhaga_submenu { get; set; }
         bool Oslo_submenu { get; set; }
         bool Praga_submenu { get; set; }
+        bool Budget100_submenu { get; set; }
+        bool Budget300_submenu { get; set; }
+        bool Budget500_submenu { get; set; }
+        bool Budget700_submenu { get; set; }
+        bool Budget900_submenu { get; set; }
     }
 }

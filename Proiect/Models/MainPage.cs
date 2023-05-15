@@ -69,5 +69,10 @@ namespace Proiect.Models
         public bool Copenhaga_submenu { get ; set; }
         public bool Oslo_submenu { get ; set ; }
         public bool Praga_submenu { get ; set ; }
+        public bool Budget100_submenu { get; set; }
+        public bool Budget300_submenu { get ; set ; }
+        public bool Budget500_submenu { get ; set ; }
+        public bool Budget700_submenu { get; set; }
+        public bool Budget900_submenu { get; set; }
     }
 }

@@ -14,22 +14,17 @@ namespace Proiect.Presenters
     class CircuitsPresenter
     {
         ICircuits circuitsView;
+        public static IMainPage mainPageView;
 
         public CircuitsPresenter(ICircuits view)
         {
             circuitsView = view;
         }
-        public void Budget()
+        public CircuitsPresenter(ICircuits view, IMainPage view2)
         {
-                 
-                SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
-                myCon.Open();
-                SqlDataAdapter daBarcelona = new SqlDataAdapter("SELECT * FROM ACTIVITATI WHERE BUDGET < 100", myCon); //INNER JOIN CU DESTINATIA
-                DataTable dtBarcelona = new DataTable();
-                daBarcelona.Fill(dtBarcelona);
-                circuitsView.gridView = dtBarcelona;
-                myCon.Close();
-            
+            circuitsView = view;
+            mainPageView = view2;
         }
+     
     }
 }

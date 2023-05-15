@@ -65,20 +65,17 @@ namespace Proiect
             cn.Close();
 
         }
-        private void BtnSignUp_Click(object sender, EventArgs e)
-        {
-            RegisterPresenter presenter = new RegisterPresenter(this);
-            presenter.SignUpButton();
-        }
 
         private void button_Login_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
-
-           
         }
 
-       
+        private void BtnSignUp_Click_1(object sender, EventArgs e)
+        {
+            RegisterPresenter presenter = new RegisterPresenter(this);
+            presenter.SignUpButton();
+        }
     }
 }

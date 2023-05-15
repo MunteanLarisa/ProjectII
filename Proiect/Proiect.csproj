@@ -79,6 +79,30 @@
     <Compile Include="ExoticCircuits.Designer.cs">
       <DependentUpon>ExoticCircuits.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExoticCircuits_Bali.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExoticCircuits_Bali.Designer.cs">
+      <DependentUpon>ExoticCircuits_Bali.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExoticCircuits_BoraBora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExoticCircuits_BoraBora.Designer.cs">
+      <DependentUpon>ExoticCircuits_BoraBora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExoticCircuits_Dubai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExoticCircuits_Dubai.Designer.cs">
+      <DependentUpon>ExoticCircuits_Dubai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExoticCircuits_Maldives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExoticCircuits_Maldives.Designer.cs">
+      <DependentUpon>ExoticCircuits_Maldives.cs</DependentUpon>
+    </Compile>
     <Compile Include="HotDeals_Ankara.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,8 +140,14 @@
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CircuitsModel.cs" />
+    <Compile Include="Models\ExoticBaliModel.cs" />
+    <Compile Include="Models\ExoticBoraBoraModel.cs" />
+    <Compile Include="Models\ExoticDubaiModel.cs" />
+    <Compile Include="Models\ExoticMaldivesModel.cs" />
     <Compile Include="Models\HotDealsAnkaraModel.cs" />
     <Compile Include="Models\HotDealsBruxellesModel.cs" />
+    <Compile Include="Models\HotDealsBucharestModel.cs" />
+    <Compile Include="Models\HotDealsBudapestModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MainPage.cs" />
     <Compile Include="Models\PackagesModel.cs" />
@@ -129,8 +159,14 @@
       <DependentUpon>Packages.cs</DependentUpon>
     </Compile>
     <Compile Include="Presenters\CircuitsPresenter.cs" />
+    <Compile Include="Presenters\ExoticBaliPresenter.cs" />
+    <Compile Include="Presenters\ExoticBoraBoraPresenter.cs" />
+    <Compile Include="Presenters\ExoticDubaiPresenter.cs" />
+    <Compile Include="Presenters\ExoticMaldivesPresenter.cs" />
     <Compile Include="Presenters\HotDealsAnkaraPresenter.cs" />
     <Compile Include="Presenters\HotDealsBruxellesPresenter.cs" />
+    <Compile Include="Presenters\HotDealsBucharestPresenter.cs" />
+    <Compile Include="Presenters\HotDealsBudapestPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainPagePresenter.cs" />
     <Compile Include="Presenters\PackagesPresenter.cs" />
@@ -144,8 +180,14 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ICircuits.cs" />
+    <Compile Include="Views\IExoticBali.cs" />
+    <Compile Include="Views\IExoticBoraBora.cs" />
+    <Compile Include="Views\IExoticDubai.cs" />
+    <Compile Include="Views\IExoticMaldives.cs" />
     <Compile Include="Views\IHotDealsAnkara.cs" />
     <Compile Include="Views\IHotDealsBruxelles.cs" />
+    <Compile Include="Views\IHotDealsBucharest.cs" />
+    <Compile Include="Views\IHotDealsBudapest.cs" />
     <Compile Include="Views\ILogin.cs" />
     <Compile Include="Views\IMainPage.cs" />
     <Compile Include="Views\IPackages.cs" />
@@ -158,6 +200,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExoticCircuits.resx">
       <DependentUpon>ExoticCircuits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExoticCircuits_Bali.resx">
+      <DependentUpon>ExoticCircuits_Bali.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExoticCircuits_BoraBora.resx">
+      <DependentUpon>ExoticCircuits_BoraBora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExoticCircuits_Dubai.resx">
+      <DependentUpon>ExoticCircuits_Dubai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExoticCircuits_Maldives.resx">
+      <DependentUpon>ExoticCircuits_Maldives.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HotDeals_Ankara.resx">
       <DependentUpon>HotDeals_Ankara.cs</DependentUpon>

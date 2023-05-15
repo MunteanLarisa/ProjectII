@@ -34,3 +34,7 @@ C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals_Ankara.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals_Budapest.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals_Bruxelles.resources
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.HotDeals_Bucharest.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.ExoticCircuits_BoraBora.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.ExoticCircuits_Bali.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.ExoticCircuits_Dubai.resources
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.ExoticCircuits_Maldives.resources
