@@ -63,4 +63,4 @@ D:\clone_16.05\ProjectII\Proiect\obj\Debug\Proiect.csproj.GenerateResource.cache
 D:\clone_16.05\ProjectII\Proiect\obj\Debug\Proiect.csproj.CoreCompileInputs.cache
 D:\clone_16.05\ProjectII\Proiect\obj\Debug\Proiect.exe
 D:\clone_16.05\ProjectII\Proiect\obj\Debug\Proiect.pdb
-C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.csproj.AssemblyReference.cache
+C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.csprojAssemblyReference.cache

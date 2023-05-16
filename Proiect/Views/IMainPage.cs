@@ -19,14 +19,6 @@ namespace Proiect.Views
         {
             get; set;
         }
-        string Transport
-        {
-            get; set;
-        }
-        DateTime Date
-        {
-            get; set;
-        }
         int Nights
         {
             get; set;

@@ -26,8 +26,6 @@ namespace Proiect
 
         public string Destination_Paris { get => availableDestinationsToolStripMenuItem.Text; set => availableDestinationsToolStripMenuItem.Text = value; }
         public string DepartureCity { get => availableCitiesToolStripMenuItem.Text; set => availableCitiesToolStripMenuItem.Text = value; }
-        public string Transport { get => availableTarnsportToolStripMenuItem.Text; set => availableTarnsportToolStripMenuItem.Text = value; }
-        public DateTime Date { get => Convert.ToDateTime(menuStrip_DepartureDate.Text); set => menuStrip_DepartureDate.Text = value.ToString(); }
         public int Nights { get => Convert.ToInt32(menuStrip_NoOfNights.Text); set => menuStrip_NoOfNights.Text = value.ToString(); }
         public int Rooms { get => Convert.ToInt32(menuStrip_NoOfRooms); set => menuStrip_NoOfRooms.ToString(); }
         public int Adults { get => Convert.ToInt32(menuStrip_Adults); set => menuStrip_Adults.ToString(); }
@@ -88,14 +86,6 @@ namespace Proiect
     private void button3_Click(object sender, EventArgs e)
     {
 
-    }
-
-    private void button4_Click(object sender, EventArgs e)
-    {
-        carToolStripMenuItem.Checked = false;
-        planeToolStripMenuItem.Checked = false;
-        trainToolStripMenuItem.Checked = false;
-        busToolStripMenuItem.Checked = false;
     }
 
     private void button5_Click(object sender, EventArgs e)

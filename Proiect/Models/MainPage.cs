@@ -17,14 +17,6 @@ namespace Proiect.Models
         {
             get; set;
         }
-        public string Transport
-        {
-            get; set;
-        }
-        public DateTime Date
-        {
-            get; set;
-        }
         public int Nights
         {
             get; set;
