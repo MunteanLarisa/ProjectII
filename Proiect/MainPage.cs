@@ -181,6 +181,11 @@ namespace Proiect
             ExoticCircuits_Maldives c = new ExoticCircuits_Maldives();
             c.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

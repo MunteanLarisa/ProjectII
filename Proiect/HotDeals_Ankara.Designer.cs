@@ -40,33 +40,30 @@ namespace Proiect
             this.dataGridView_Ankara.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView_Ankara.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Ankara.GridColor = System.Drawing.Color.White;
-            this.dataGridView_Ankara.Location = new System.Drawing.Point(13, 144);
-            this.dataGridView_Ankara.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView_Ankara.Location = new System.Drawing.Point(20, 100);
             this.dataGridView_Ankara.Name = "dataGridView_Ankara";
             this.dataGridView_Ankara.RowHeadersWidth = 51;
-            this.dataGridView_Ankara.Size = new System.Drawing.Size(495, 499);
+            this.dataGridView_Ankara.Size = new System.Drawing.Size(718, 158);
             this.dataGridView_Ankara.TabIndex = 11;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proiect.Properties.Resources.logi1;
             this.pictureBox1.InitialImage = global::Proiect.Properties.Resources.logi;
-            this.pictureBox1.Location = new System.Drawing.Point(-94, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(-70, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(602, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(452, 74);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
             // HotDeals_Ankara
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1025, 688);
+            this.ClientSize = new System.Drawing.Size(779, 541);
             this.Controls.Add(this.dataGridView_Ankara);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HotDeals_Ankara";
             this.Text = "HotDeals";
             this.Load += new System.EventHandler(this.HotDeals_Ankara_Load);

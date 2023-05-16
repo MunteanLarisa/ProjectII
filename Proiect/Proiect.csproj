@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -280,6 +282,26 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\shutterstock_227555356_20190822140101_201908221401071.jpg" />
+    <None Include="Resources\maldives-1993704__4801.jpg" />
+    <None Include="Resources\istockphoto-178807280-170667a1.jpg" />
+    <None Include="Resources\bora.jpg" />
+    <None Include="Resources\buh-2020-featured.jpg" />
+    <None Include="Resources\brussels.jpg" />
+    <None Include="Resources\bucu.jpg" />
+    <None Include="Resources\budapesta.jpg" />
+    <None Include="Resources\ankara.jpg" />
+    <None Include="Resources\Dubai1 %285%29.jpg" />
+    <None Include="Resources\paris.jpg" />
+    <None Include="Resources\Abu_dhabi2.jpg" />
+    <None Include="Resources\london-landscape-top-view1.jpg" />
+    <None Include="Resources\ceva cu barci.jpg" />
+    <None Include="Resources\amsterdam.jpg" />
+    <None Include="Resources\praga.jpg" />
+    <None Include="Resources\beldrag.jpg" />
+    <None Include="Resources\barcelona2.jpg" />
+    <None Include="Resources\istockphoto-1326144217-612x6121.jpg" />
+    <None Include="Resources\barcelona1.jpg" />
     <None Include="Resources\images.jpeg" />
     <None Include="Resources\download %281%29.jpeg" />
     <None Include="Resources\istockphoto-153006184-612x612.jpg" />
