@@ -14,12 +14,15 @@ namespace Proiect.Presenters
     class MainPagePresenter 
     {
          public static IMainPage mainPageView;
-         IPackages packagesView;
+         public static IPackages packagesView;
          ICircuits circuitsView;
          SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
 
-        public MenuStrip MainMenuStrip { get; private set; }
-
+        //public MenuStrip MainMenuStrip { get; private set; }
+        public MainPagePresenter(IMainPage view)
+        {
+            mainPageView = view;
+        }
         public MainPagePresenter(IMainPage view, IPackages view2)
         {
             mainPageView = view;
@@ -30,14 +33,67 @@ namespace Proiect.Presenters
             mainPageView = view;
             circuitsView = view2;
         }
-        public MainPagePresenter(IMainPage view)
-        {
-            mainPageView = view;
-        }
+       
         public void Paris_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Accomodation_type, (ACTIVITATI.BUDGET+CAZARE.BUDGET) AS TOTAL FROM ACTIVITATI INNER JOIN CAZARE ON ACTIVITATI.ID=CAZARE.ID AND CAZARE.ID = 1", myCon);
+            //string msg1 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in MainPagePresenter.mainPageView.Destinations)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg1 = menuItem.Text;
+            //    }
+            //}
+            //string msg2 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in availableCitiesToolStripMenuItem.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg2 = menuItem.Text;
+            //    }
+            //}
+            //string msg3 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in availableOptionsToolStripMenuItem.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg3 = menuItem.Text;
+            //    }
+            //}
+            //string msg4 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in availableOptionsToolStripMenuItem1.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg4 = menuItem.Text;
+            //    }
+            //}
+            //string msg5 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg5 = menuItem.Text;
+            //    }
+            //}
+            //string msg6 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem1.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg6 = menuItem.Text;
+            //    }
+            //}
+            //string msg7 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem2.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg7 = menuItem.Text;
+            //    }
+            //}
+            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Accomodation_type, PLECARE.CITY AS DEPARTURE, (ACTIVITATI.BUDGET+CAZARE.BUDGET) AS TOTAL FROM ACTIVITATI INNER JOIN CAZARE ON ACTIVITATI.ID=CAZARE.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID ", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
@@ -211,7 +267,7 @@ namespace Proiect.Presenters
         {
             SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, OFERTE.Budget FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 100 AND 299 ", myCon); 
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, (ACTIVITATI.BUDGET+SUGESTII.BUDGET) AS TOTAL FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 100 AND 299 ", myCon); 
             DataTable dt = new DataTable();
             da.Fill(dt);
             circuitsView.gridView = dt;
@@ -221,7 +277,7 @@ namespace Proiect.Presenters
         {
             SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, OFERTE.Budget FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 300 AND 499", myCon); //INNER JOIN CU DESTINATIA
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, (ACTIVITATI.BUDGET+SUGESTII.BUDGET) AS TOTAL FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 300 AND 499", myCon); 
             DataTable dt = new DataTable();
             da.Fill(dt);
             circuitsView.gridView = dt;
@@ -231,7 +287,7 @@ namespace Proiect.Presenters
         {
             SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, OFERTE.Budget FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 500 AND 699", myCon); //INNER JOIN CU DESTINATIA
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, (ACTIVITATI.BUDGET+SUGESTII.BUDGET) AS TOTAL FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 500 AND 699 ", myCon); 
             DataTable dt = new DataTable();
             da.Fill(dt);
             circuitsView.gridView = dt;
@@ -241,7 +297,7 @@ namespace Proiect.Presenters
         {
             SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, OFERTE.Budget FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 700 AND 899", myCon); //INNER JOIN CU DESTINATIA
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, (ACTIVITATI.BUDGET+SUGESTII.BUDGET) AS TOTAL FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 700 AND 899", myCon); 
             DataTable dt = new DataTable();
             da.Fill(dt);
             circuitsView.gridView = dt;
@@ -251,7 +307,7 @@ namespace Proiect.Presenters
         {
             SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, OFERTE.Budget FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET)>900", myCon); //INNER JOIN CU DESTINATIA
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.City, ACTIVITATI.Activity AS Activity1,SUGESTII.Suggestions AS Activity2, (ACTIVITATI.BUDGET+SUGESTII.BUDGET) AS TOTAL FROM ACTIVITATI JOIN DESTINATII ON ACTIVITATI.ID=DESTINATII.ID JOIN SUGESTII ON SUGESTII.ID=ACTIVITATI.ID JOIN OFERTE ON ACTIVITATI.BUDGET=OFERTE.BUDGET WHERE (ACTIVITATI.BUDGET+SUGESTII.BUDGET) BETWEEN 900 AND 1000000000", myCon); 
             DataTable dt = new DataTable();
             da.Fill(dt);
             circuitsView.gridView = dt;

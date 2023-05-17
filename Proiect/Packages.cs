@@ -44,7 +44,7 @@ namespace Proiect
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Paris_menu();
             }
-            else if(MainPagePresenter.mainPageView.Milano_submenu)
+            else if (MainPagePresenter.mainPageView.Milano_submenu)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Milano_menu();
@@ -109,6 +109,63 @@ namespace Proiect
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Praga_menu();
             }
+            else MessageBox.Show("Please select a destination!");
+            //string msg1 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in MainPagePresenter.mainPageView.Destinations)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg1 = menuItem.ToString();
+            //    }
+            //}
+            //string msg2 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in availableCitiesToolStripMenuItem.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg2 = menuItem.Text;
+            //    }
+            //}
+            //string msg3 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in availableOptionsToolStripMenuItem.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg3 = menuItem.Text;
+            //    }
+            //}
+            //string msg4 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in availableOptionsToolStripMenuItem1.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg4 = menuItem.Text;
+            //    }
+            //}
+            //string msg5 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg5 = menuItem.Text;
+            //    }
+            //}
+            //string msg6 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem1.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg6 = menuItem.Text;
+            //    }
+            //}
+            //string msg7 = string.Empty;
+            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem2.DropDownItems)
+            //{
+            //    if (menuItem.Checked == true)
+            //    {
+            //        msg7 = menuItem.Text;
+            //    }
+            //}
             myCon.Close();
         }
     }

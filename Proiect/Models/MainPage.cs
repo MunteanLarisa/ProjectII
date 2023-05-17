@@ -9,10 +9,7 @@ namespace Proiect.Models
 {
     class MainPage
     {
-        public string Destination_Paris
-        {
-            get; set;
-        }
+        public ToolStripItemCollection Destinations { get ; set ; }
         public string DepartureCity
         {
             get; set;
@@ -66,5 +63,22 @@ namespace Proiect.Models
         public bool Budget500_submenu { get ; set ; }
         public bool Budget700_submenu { get; set; }
         public bool Budget900_submenu { get; set; }
-    }
+        public bool CityOfDeparture_ClujNapoca { get; set; }
+        public bool CityOfDeparture_Bucharest { get; set; }
+        public bool Nights_3 { get; set; }
+        public bool Nights_5 { get; set; }
+        public bool Nights_7 { get; set; }
+        public bool Rooms_1 { get; set; }
+        public bool Rooms_2 { get; set; }
+        public bool Rooms_3 { get; set; }
+        public bool Adults_1 { get; set; }
+        public bool Adults_2 { get; set; }
+        public bool Children_1 { get; set; }
+        public bool Children_2 { get; set; }
+        public bool PetFriendly_Yes { get; set; }
+        public bool PetFriendly_No { get; set; }
+        public String CityOfDeparture_Cluj { get; set ; }
+
+
+    }  
 }

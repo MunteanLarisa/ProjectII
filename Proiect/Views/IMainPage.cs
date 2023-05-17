@@ -11,10 +11,7 @@ namespace Proiect.Views
 {
     interface IMainPage
     {
-        string Destination_Paris
-        {
-            get; set;
-        }
+        ToolStripItemCollection Destinations { get ; set ; }
         string DepartureCity
         {
             get; set;
@@ -68,5 +65,20 @@ namespace Proiect.Views
         bool Budget500_submenu { get; set; }
         bool Budget700_submenu { get; set; }
         bool Budget900_submenu { get; set; }
+        bool CityOfDeparture_ClujNapoca { get; set; }
+        bool CityOfDeparture_Bucharest { get; set; }
+        bool Nights_3 { get; set; }
+        bool Nights_5 { get; set; }
+        bool Nights_7 { get; set; }
+        bool Rooms_1 { get; set; }
+        bool Rooms_2 { get; set; }
+        bool Rooms_3 { get; set; }
+        bool Adults_1 { get; set; }
+        bool Adults_2 { get; set; }
+        bool Children_1 { get; set; }
+        bool Children_2 { get; set; }
+        bool PetFriendly_Yes { get; set; }
+        bool PetFriendly_No { get; set; }
+        String CityOfDeparture_Cluj { get; set ; }
     }
 }
