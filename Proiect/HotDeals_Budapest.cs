@@ -28,5 +28,11 @@ namespace Proiect
             HotDealsBudapestPresenter presenter = new HotDealsBudapestPresenter(this);
             presenter.Populate();
         }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            Checkout f = new Checkout();
+            f.Show();
+        }
     }
 }

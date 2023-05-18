@@ -622,9 +622,8 @@ namespace Proiect
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Ckeckout_ checkout = new Ckeckout_();
-            checkout.Show();
-
+            Checkout f = new Checkout();
+            f.Show();
         }
     }
 }

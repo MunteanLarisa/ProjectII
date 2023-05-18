@@ -64,4 +64,3 @@ D:\clone_16.05\ProjectII\Proiect\obj\Debug\Proiect.csproj.CoreCompileInputs.cach
 D:\clone_16.05\ProjectII\Proiect\obj\Debug\Proiect.exe
 D:\clone_16.05\ProjectII\Proiect\obj\Debug\Proiect.pdb
 C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.csprojAssemblyReference.cache
-C:\Proiect_II\ProjectII\Proiect\obj\Debug\Proiect.Ckeckout_.resources

@@ -8,7 +8,6 @@ using Proiect.Views;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
-using System.Net.Mail;
 
 namespace Proiect.Presenters
 {
@@ -21,31 +20,43 @@ namespace Proiect.Presenters
         }
         public void Checkout()
         {
-            // Email
-            SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
+            SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True"); 
             myCon.Open();
-            SqlCommand email = new SqlCommand("Select FirstNAME,LastName FROM Customer Where Email = @Email", myCon);
-            email.Parameters.AddWithValue("@Email", checkout.Email);
-            string searchemail = (string)email.ExecuteScalar();
-            MailMessage mail = new MailMessage();
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
 
-            mail.From = new MailAddress(" ");
-            mail.To.Add(searchemail);
-            mail.Subject = "Holiday package";
-            mail.Body = "Hello! Thank you for chosing SeeTheWorld travel agency for your next vacantion! For any questions, don'T hesitate to write an email!";
-            smtp.Port = 587;
-            smtp.Credentials = new System.Net.NetworkCredential(" ", " ");
-            smtp.EnableSsl = true;
-            smtp.Send(mail);
+            if (checkout.FirstName != string.Empty || checkout.LastName != string.Empty || checkout.Email != string.Empty || checkout.CountryOfResidence != string.Empty || checkout.Day != string.Empty || checkout.Month != string.Empty || checkout.Year != string.Empty)
+            {
 
-            MessageBox.Show("An email has been send to:" + searchemail);
-
-            checkout.FirstName = null;
-            checkout.LastName = null;
-            checkout.Email = null;
+                    SqlCommand cmd = new SqlCommand("select * from Customer where Email='" + checkout.Email + "'", myCon);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    
+                    if (dr.Read())
+                    {
+                        dr.Close();
+                        MessageBox.Show("Your checkout is already saved.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     }
+                    else
+                    {
+                        dr.Close();
+                        SqlCommand command = new SqlCommand("INSERT INTO Customer (FirstName, LastName, Email, CountryOfResidence, Day, Month, Year) VALUES (@FirstName, @LastName, @Email, @CountryOfResidence,@Day,@Month, @Year)", myCon);
+                        command.Parameters.Add("@FirstName", SqlDbType.Text).Value = checkout.FirstName;
+                        command.Parameters.Add("@LastName", SqlDbType.Text).Value = checkout.LastName;
+                        command.Parameters.Add("@Email", SqlDbType.Text).Value = checkout.Email;
+                        command.Parameters.Add("@CountryOfResidence", SqlDbType.Text).Value = checkout.CountryOfResidence;
+                        command.Parameters.Add("@Day", SqlDbType.Text).Value = checkout.Day;
+                        command.Parameters.Add("@Month", SqlDbType.Text).Value = checkout.Month;
+                        command.Parameters.Add("@Year", SqlDbType.Text).Value = checkout.Year;
+                        MessageBox.Show("Checkout complet! An agent will contact you as soon as possible!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                    }
+               
+            }
+            else
+            {
+                MessageBox.Show("PLease complete all fileds!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+      
+           
             myCon.Close();
-          
         }
     }
 }

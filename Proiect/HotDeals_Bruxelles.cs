@@ -37,5 +37,10 @@ namespace Proiect
             HotDealsBruxellesPresenter presenter = new HotDealsBruxellesPresenter(this);
             presenter.Populate();
         }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

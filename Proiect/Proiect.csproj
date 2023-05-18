@@ -75,12 +75,6 @@
     <Compile Include="Circuits.Designer.cs">
       <DependentUpon>Circuits.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ckeckout_.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ckeckout_.Designer.cs">
-      <DependentUpon>Ckeckout_.cs</DependentUpon>
-    </Compile>
     <Compile Include="ExoticCircuits.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +141,7 @@
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CheckoutModel.cs" />
     <Compile Include="Models\CircuitsModel.cs" />
     <Compile Include="Models\ExoticBaliModel.cs" />
     <Compile Include="Models\ExoticBoraBoraModel.cs" />
@@ -188,7 +183,6 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CheckoutModel.cs" />
     <Compile Include="Views\ICheckout.cs" />
     <Compile Include="Views\ICircuits.cs" />
     <Compile Include="Views\IExoticBali.cs" />
@@ -208,9 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Circuits.resx">
       <DependentUpon>Circuits.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ckeckout_.resx">
-      <DependentUpon>Ckeckout_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExoticCircuits.resx">
       <DependentUpon>ExoticCircuits.cs</DependentUpon>

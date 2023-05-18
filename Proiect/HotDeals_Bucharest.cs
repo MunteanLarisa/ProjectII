@@ -28,5 +28,11 @@ namespace Proiect
             HotDealsBucharestPresenter presenter = new HotDealsBucharestPresenter(this);
             presenter.Populate();
         }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            Checkout f = new Checkout();
+            f.Show();
+        }
     }
 }
