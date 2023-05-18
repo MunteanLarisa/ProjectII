@@ -75,8 +75,9 @@ namespace Proiect.Views
         bool Rooms_3 { get; set; }
         bool Adults_1 { get; set; }
         bool Adults_2 { get; set; }
-        bool Children_1 { get; set; }
-        bool Children_2 { get; set; }
+        bool Children_0 { get; set ; }
+        bool Children_1 { get ; set ; }
+        bool Children_2 { get; set ; }
         bool PetFriendly_Yes { get; set; }
         bool PetFriendly_No { get; set; }
         String CityOfDeparture_Cluj { get; set ; }

@@ -29,7 +29,7 @@ namespace Proiect
         public int Children { get => Convert.ToInt32(menuStrip_Children); set => menuStrip_Children.ToString(); }
         public string Pet { get => menuStrip_PetFriendly.Text; set => menuStrip_PetFriendly.Text = value.ToString(); }
         public int Budget { get => Convert.ToInt32(menuStrip_bugete); set => menuStrip_bugete.ToString(); }
-        public bool Paris_submenu { get => parisToolStripMenuItem.Checked; set => parisToolStripMenuItem.ToString(); }
+        public bool Paris_submenu { get => parisToolStripMenuItem.Checked; set => parisToolStripMenuItem.GetType(); }
         public bool Milano_submenu { get => milanoToolStripMenuItem.Checked; set => milanoToolStripMenuItem.ToString(); }
         public bool Barcelona_submenu { get => barcelonaToolStripMenuItem.Checked; set => barcelonaToolStripMenuItem.ToString(); }
         public bool London_submenu { get => londonToolStripMenuItem.Checked; set => londonToolStripMenuItem.ToString(); }
@@ -58,8 +58,9 @@ namespace Proiect
         public bool Rooms_3 { get => toolStripMenuRooms3.Checked; set => toolStripMenuRooms3.ToString(); }
         public bool Adults_1 { get => toolStripMenuAdults1.Checked; set => toolStripMenuAdults1.ToString(); }
         public bool Adults_2 { get => toolStripMenuAdults2.Checked; set => toolStripMenuAdults2.ToString(); }
-        public bool Children_1 { get => toolStripMenuChildren1.Checked; set => toolStripMenuChildren1.ToString(); }
-        public bool Children_2 { get => toolStripMenuChildren2.Checked; set => toolStripMenuChildren2.ToString(); }
+        public bool Children_0 { get => toolStripMenuChildren1.Checked; set => toolStripMenuChildren1.ToString(); }
+        public bool Children_1 { get => toolStripMenuChildren2.Checked; set => toolStripMenuChildren2.ToString(); }
+        public bool Children_2 { get => toolStripMenuItem2.Checked; set => toolStripMenuItem2.ToString(); }
         public bool PetFriendly_Yes { get => yesToolStripMenuItem.Checked; set => yesToolStripMenuItem.ToString(); }
         public bool PetFriendly_No { get => noToolStripMenuItem.Checked; set => noToolStripMenuItem.ToString(); }
         public String CityOfDeparture_Cluj { get => clujNapocaToolStripMenuItem.Text; set => clujNapocaToolStripMenuItem.Text=value; }
@@ -132,7 +133,7 @@ namespace Proiect
                 }
             }
             MessageBox.Show("You have chosen: \nDestination:" + msg1 + "\nDeparture city:" + msg2 + "\nNumber of nights:" + msg3 + "\nNumber of rooms:" + msg4 + "\nAdults:" + msg5 + "\nChildren: " + msg6 + "\nPet:" + msg7 + ".", "Selection");
-            
+
         }
     private void button2_Click(object sender, EventArgs e)
     {
@@ -249,12 +250,7 @@ namespace Proiect
 
         }
 
-        private void availableDestinationsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
+     
     }
 }
 

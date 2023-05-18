@@ -105,6 +105,7 @@
             this.chooseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuChildren1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuChildren2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip_Adults = new System.Windows.Forms.MenuStrip();
             this.chooseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuAdults1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -1106,7 +1107,8 @@
             this.chooseToolStripMenuItem1.CheckOnClick = true;
             this.chooseToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuChildren1,
-            this.toolStripMenuChildren2});
+            this.toolStripMenuChildren2,
+            this.toolStripMenuItem2});
             this.chooseToolStripMenuItem1.Name = "chooseToolStripMenuItem1";
             this.chooseToolStripMenuItem1.Size = new System.Drawing.Size(75, 24);
             this.chooseToolStripMenuItem1.Text = "Choose:";
@@ -1115,15 +1117,22 @@
             // 
             this.toolStripMenuChildren1.CheckOnClick = true;
             this.toolStripMenuChildren1.Name = "toolStripMenuChildren1";
-            this.toolStripMenuChildren1.Size = new System.Drawing.Size(100, 26);
-            this.toolStripMenuChildren1.Text = "1";
+            this.toolStripMenuChildren1.ShowShortcutKeys = false;
+            this.toolStripMenuChildren1.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuChildren1.Text = "0";
             // 
             // toolStripMenuChildren2
             // 
             this.toolStripMenuChildren2.CheckOnClick = true;
             this.toolStripMenuChildren2.Name = "toolStripMenuChildren2";
-            this.toolStripMenuChildren2.Size = new System.Drawing.Size(100, 26);
-            this.toolStripMenuChildren2.Text = "2";
+            this.toolStripMenuChildren2.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuChildren2.Text = "1";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem2.Text = "2";
             // 
             // menuStrip_Adults
             // 
@@ -1136,7 +1145,7 @@
             this.menuStrip_Adults.Location = new System.Drawing.Point(93, 437);
             this.menuStrip_Adults.Name = "menuStrip_Adults";
             this.menuStrip_Adults.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip_Adults.Size = new System.Drawing.Size(232, 28);
+            this.menuStrip_Adults.Size = new System.Drawing.Size(82, 28);
             this.menuStrip_Adults.TabIndex = 13;
             this.menuStrip_Adults.Text = "-Alege data-";
             // 
@@ -1149,7 +1158,6 @@
             this.chooseToolStripMenuItem.Name = "chooseToolStripMenuItem";
             this.chooseToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.chooseToolStripMenuItem.Text = "Choose:";
-   
             // 
             // toolStripMenuAdults1
             // 
@@ -1207,21 +1215,21 @@
             // 
             this.toolStripMenuRooms1.CheckOnClick = true;
             this.toolStripMenuRooms1.Name = "toolStripMenuRooms1";
-            this.toolStripMenuRooms1.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuRooms1.Size = new System.Drawing.Size(224, 26);
             this.toolStripMenuRooms1.Text = "1";
             // 
             // toolStripMenuRooms2
             // 
             this.toolStripMenuRooms2.CheckOnClick = true;
             this.toolStripMenuRooms2.Name = "toolStripMenuRooms2";
-            this.toolStripMenuRooms2.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuRooms2.Size = new System.Drawing.Size(224, 26);
             this.toolStripMenuRooms2.Text = "2";
             // 
             // toolStripMenuRooms3
             // 
             this.toolStripMenuRooms3.CheckOnClick = true;
             this.toolStripMenuRooms3.Name = "toolStripMenuRooms3";
-            this.toolStripMenuRooms3.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuRooms3.Size = new System.Drawing.Size(224, 26);
             this.toolStripMenuRooms3.Text = "3";
             // 
             // label4
@@ -1299,21 +1307,21 @@
             // 
             this.toolStripMenuNights3.CheckOnClick = true;
             this.toolStripMenuNights3.Name = "toolStripMenuNights3";
-            this.toolStripMenuNights3.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuNights3.Size = new System.Drawing.Size(224, 26);
             this.toolStripMenuNights3.Text = "3";
             // 
             // toolStripMenuNights5
             // 
             this.toolStripMenuNights5.CheckOnClick = true;
             this.toolStripMenuNights5.Name = "toolStripMenuNights5";
-            this.toolStripMenuNights5.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuNights5.Size = new System.Drawing.Size(224, 26);
             this.toolStripMenuNights5.Text = "5";
             // 
             // toolStripMenuNights7
             // 
             this.toolStripMenuNights7.CheckOnClick = true;
             this.toolStripMenuNights7.Name = "toolStripMenuNights7";
-            this.toolStripMenuNights7.Size = new System.Drawing.Size(100, 26);
+            this.toolStripMenuNights7.Size = new System.Drawing.Size(224, 26);
             this.toolStripMenuNights7.Text = "7";
             // 
             // menuStrip_Destinations
@@ -1325,7 +1333,7 @@
             this.menuStrip_Destinations.Location = new System.Drawing.Point(93, 87);
             this.menuStrip_Destinations.Name = "menuStrip_Destinations";
             this.menuStrip_Destinations.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip_Destinations.Size = new System.Drawing.Size(82, 28);
+            this.menuStrip_Destinations.Size = new System.Drawing.Size(232, 28);
             this.menuStrip_Destinations.TabIndex = 29;
             this.menuStrip_Destinations.Text = "menuStrip2";
             // 
@@ -1350,104 +1358,103 @@
             this.availableDestinationsToolStripMenuItem.Name = "availableDestinationsToolStripMenuItem";
             this.availableDestinationsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.availableDestinationsToolStripMenuItem.Text = "Choose:";
-            this.availableDestinationsToolStripMenuItem.Click += new System.EventHandler(this.availableDestinationsToolStripMenuItem_Click);
             // 
             // parisToolStripMenuItem
             // 
             this.parisToolStripMenuItem.CheckOnClick = true;
             this.parisToolStripMenuItem.Name = "parisToolStripMenuItem";
-            this.parisToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.parisToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.parisToolStripMenuItem.Text = "Paris";
             // 
             // milanoToolStripMenuItem
             // 
             this.milanoToolStripMenuItem.CheckOnClick = true;
             this.milanoToolStripMenuItem.Name = "milanoToolStripMenuItem";
-            this.milanoToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.milanoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.milanoToolStripMenuItem.Text = "Milano";
             // 
             // barcelonaToolStripMenuItem
             // 
             this.barcelonaToolStripMenuItem.CheckOnClick = true;
             this.barcelonaToolStripMenuItem.Name = "barcelonaToolStripMenuItem";
-            this.barcelonaToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.barcelonaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.barcelonaToolStripMenuItem.Text = "Barcelona";
             // 
             // londonToolStripMenuItem
             // 
             this.londonToolStripMenuItem.CheckOnClick = true;
             this.londonToolStripMenuItem.Name = "londonToolStripMenuItem";
-            this.londonToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.londonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.londonToolStripMenuItem.Text = "London";
             // 
             // berlinToolStripMenuItem
             // 
             this.berlinToolStripMenuItem.CheckOnClick = true;
             this.berlinToolStripMenuItem.Name = "berlinToolStripMenuItem";
-            this.berlinToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.berlinToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.berlinToolStripMenuItem.Text = "Berlin";
             // 
             // abuDhabiToolStripMenuItem
             // 
             this.abuDhabiToolStripMenuItem.CheckOnClick = true;
             this.abuDhabiToolStripMenuItem.Name = "abuDhabiToolStripMenuItem";
-            this.abuDhabiToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.abuDhabiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.abuDhabiToolStripMenuItem.Text = "Abu Dhabi";
             // 
             // amsterdamToolStripMenuItem
             // 
             this.amsterdamToolStripMenuItem.CheckOnClick = true;
             this.amsterdamToolStripMenuItem.Name = "amsterdamToolStripMenuItem";
-            this.amsterdamToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.amsterdamToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.amsterdamToolStripMenuItem.Text = "Amsterdam";
             // 
             // ankaraToolStripMenuItem
             // 
             this.ankaraToolStripMenuItem.CheckOnClick = true;
             this.ankaraToolStripMenuItem.Name = "ankaraToolStripMenuItem";
-            this.ankaraToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.ankaraToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ankaraToolStripMenuItem.Text = "Ankara";
             // 
             // belgradToolStripMenuItem
             // 
             this.belgradToolStripMenuItem.CheckOnClick = true;
             this.belgradToolStripMenuItem.Name = "belgradToolStripMenuItem";
-            this.belgradToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.belgradToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.belgradToolStripMenuItem.Text = "Belgrad";
             // 
             // bruxellesToolStripMenuItem
             // 
             this.bruxellesToolStripMenuItem.CheckOnClick = true;
             this.bruxellesToolStripMenuItem.Name = "bruxellesToolStripMenuItem";
-            this.bruxellesToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
-            this.bruxellesToolStripMenuItem.Text = "Bruxelles";
+            this.bruxellesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bruxellesToolStripMenuItem.Text = "Brussels";
             // 
             // budapestToolStripMenuItem
             // 
             this.budapestToolStripMenuItem.CheckOnClick = true;
             this.budapestToolStripMenuItem.Name = "budapestToolStripMenuItem";
-            this.budapestToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.budapestToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.budapestToolStripMenuItem.Text = "Budapest";
             // 
             // copenhagaToolStripMenuItem
             // 
             this.copenhagaToolStripMenuItem.CheckOnClick = true;
             this.copenhagaToolStripMenuItem.Name = "copenhagaToolStripMenuItem";
-            this.copenhagaToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.copenhagaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.copenhagaToolStripMenuItem.Text = "Copenhaga";
             // 
             // osloToolStripMenuItem
             // 
             this.osloToolStripMenuItem.CheckOnClick = true;
             this.osloToolStripMenuItem.Name = "osloToolStripMenuItem";
-            this.osloToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.osloToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.osloToolStripMenuItem.Text = "Oslo";
             // 
             // pragaToolStripMenuItem
             // 
             this.pragaToolStripMenuItem.CheckOnClick = true;
             this.pragaToolStripMenuItem.Name = "pragaToolStripMenuItem";
-            this.pragaToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.pragaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pragaToolStripMenuItem.Text = "Praga";
             // 
             // menuStrip_Departure
@@ -1680,6 +1687,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuRooms3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 

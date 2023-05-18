@@ -73,8 +73,9 @@ namespace Proiect.Models
         public bool Rooms_3 { get; set; }
         public bool Adults_1 { get; set; }
         public bool Adults_2 { get; set; }
+        public bool Children_0 { get ; set; }
         public bool Children_1 { get; set; }
-        public bool Children_2 { get; set; }
+        public bool Children_2 { get; set ; }
         public bool PetFriendly_Yes { get; set; }
         public bool PetFriendly_No { get; set; }
         public String CityOfDeparture_Cluj { get; set ; }

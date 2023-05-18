@@ -39,133 +39,584 @@ namespace Proiect
         {
             SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
             myCon.Open();
-            if (MainPagePresenter.mainPageView.Paris_submenu)
+            //PARIS
+            if (MainPagePresenter.mainPageView.Paris_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Paris_menu();
             }
-            else if (MainPagePresenter.mainPageView.Milano_submenu)
+            else if (MainPagePresenter.mainPageView.Paris_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Paris_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Paris_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Paris_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Paris_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Paris_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Paris_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Paris_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Paris_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Paris_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Paris_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Paris_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Paris_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Paris_menu8();
+            }
+            //MILANO
+            else if (MainPagePresenter.mainPageView.Milano_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Milano_menu();
             }
-            else if (MainPagePresenter.mainPageView.Barcelona_submenu)
+            else if (MainPagePresenter.mainPageView.Milano_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Milano_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Milano_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Milano_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Milano_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Milano_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Milano_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Milano_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Milano_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Milano_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Milano_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Milano_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Milano_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Milano_menu8();
+            }
+            //BARCELONA
+            else if (MainPagePresenter.mainPageView.Barcelona_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Barcelona_menu();
             }
-            else if (MainPagePresenter.mainPageView.London_submenu)
+            else if (MainPagePresenter.mainPageView.Barcelona_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Barcelona_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Barcelona_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Barcelona_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Barcelona_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Barcelona_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Barcelona_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Barcelona_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Barcelona_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Barcelona_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Barcelona_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Barcelona_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Barcelona_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Barcelona_menu8();
+            }
+            //LONDON
+            else if (MainPagePresenter.mainPageView.London_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.London_menu();
             }
-            else if (MainPagePresenter.mainPageView.Berlin_submenu)
+            else if (MainPagePresenter.mainPageView.London_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.London_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.London_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.London_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.London_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.London_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.London_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.London_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.London_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.London_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.London_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.London_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.London_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.London_menu8();
+            }
+            //BERLIN
+            else if (MainPagePresenter.mainPageView.Berlin_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Berlin_menu();
             }
-            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu)
+            else if (MainPagePresenter.mainPageView.Berlin_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Berlin_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Berlin_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Berlin_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Berlin_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Berlin_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Berlin_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Berlin_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Berlin_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Berlin_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Berlin_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Berlin_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Berlin_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Berlin_menu8();
+            }
+            //ABU DHABI
+            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.AbuDhabi_menu();
             }
-            else if (MainPagePresenter.mainPageView.Amsterdam_submenu)
+            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.AbuDhabi_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.AbuDhabi_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.AbuDhabi_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.AbuDhabi_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.AbuDhabi_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.AbuDhabi_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.AbuDhabi_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.AbuDhabi_menu8();
+            }
+            //AMSTERDAM
+            else if (MainPagePresenter.mainPageView.Amsterdam_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Amsterdam_menu();
             }
-            else if (MainPagePresenter.mainPageView.Ankara_submenu)
+            else if (MainPagePresenter.mainPageView.Amsterdam_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Amsterdam_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Amsterdam_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Amsterdam_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Amsterdam_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Amsterdam_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Amsterdam_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Amsterdam_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Amsterdam_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Amsterdam_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Amsterdam_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Amsterdam_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Amsterdam_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Amsterdam_menu8();
+            }
+            //ANKARA
+            else if (MainPagePresenter.mainPageView.Ankara_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Ankara_menu();
             }
-            else if (MainPagePresenter.mainPageView.Belgrad_submenu)
+            else if (MainPagePresenter.mainPageView.Ankara_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Ankara_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Ankara_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Ankara_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Ankara_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Ankara_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Ankara_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Ankara_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Ankara_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Ankara_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Ankara_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Ankara_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Ankara_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Ankara_menu8();
+            }
+            //BELGRAD
+            else if (MainPagePresenter.mainPageView.Belgrad_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Belgrad_menu();
             }
-            else if (MainPagePresenter.mainPageView.Bruxelles_submenu)
+            else if (MainPagePresenter.mainPageView.Belgrad_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
-                presenter.Bruxelles_menu();
+                presenter.Belgrad_menu2();
             }
-            else if (MainPagePresenter.mainPageView.Budapest_submenu)
+            else if (MainPagePresenter.mainPageView.Belgrad_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Belgrad_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Belgrad_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Belgrad_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Belgrad_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Belgrad_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Belgrad_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Belgrad_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Belgrad_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Belgrad_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Belgrad_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Belgrad_menu8();
+            }
+            //BRUSSELS
+            else if (MainPagePresenter.mainPageView.Bruxelles_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Brussels_menu();
+            }
+            else if (MainPagePresenter.mainPageView.Bruxelles_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Brussels_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Bruxelles_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Brussels_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Bruxelles_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Brussels_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Bruxelles_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Brussels_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Bruxelles_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Brussels_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Bruxelles_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Brussels_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Bruxelles_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Brussels_menu8();
+            }
+            //BUDAPEST
+            else if (MainPagePresenter.mainPageView.Budapest_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Budapest_menu();
             }
-            else if (MainPagePresenter.mainPageView.Copenhaga_submenu)
+            else if (MainPagePresenter.mainPageView.Budapest_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Budapest_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Budapest_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Budapest_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Budapest_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Budapest_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Budapest_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Budapest_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Budapest_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Budapest_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Budapest_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Budapest_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Budapest_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Budapest_menu8();
+            }
+            //COPENHAGA
+            else if (MainPagePresenter.mainPageView.Copenhaga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Copenhaga_menu();
             }
-            else if (MainPagePresenter.mainPageView.Oslo_submenu)
+            else if (MainPagePresenter.mainPageView.Copenhaga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Copenhaga_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Copenhaga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Copenhaga_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Copenhaga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Copenhaga_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Copenhaga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Copenhaga_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Copenhaga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Copenhaga_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Copenhaga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Copenhaga_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Copenhaga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Copenhaga_menu8();
+            }
+            //OSLO
+            else if (MainPagePresenter.mainPageView.Oslo_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Oslo_menu();
             }
-            else if (MainPagePresenter.mainPageView.Praga_submenu)
+            else if (MainPagePresenter.mainPageView.Oslo_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Oslo_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Oslo_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Oslo_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Oslo_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Oslo_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Oslo_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Oslo_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Oslo_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Oslo_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Oslo_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Oslo_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Oslo_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Oslo_menu8();
+            }
+            //PRAGA
+            else if (MainPagePresenter.mainPageView.Praga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
             {
                 MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
                 presenter.Praga_menu();
             }
-            else MessageBox.Show("Please select a destination!");
-            //string msg1 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in MainPagePresenter.mainPageView.Destinations)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg1 = menuItem.ToString();
-            //    }
-            //}
-            //string msg2 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in availableCitiesToolStripMenuItem.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg2 = menuItem.Text;
-            //    }
-            //}
-            //string msg3 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in availableOptionsToolStripMenuItem.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg3 = menuItem.Text;
-            //    }
-            //}
-            //string msg4 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in availableOptionsToolStripMenuItem1.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg4 = menuItem.Text;
-            //    }
-            //}
-            //string msg5 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg5 = menuItem.Text;
-            //    }
-            //}
-            //string msg6 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem1.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg6 = menuItem.Text;
-            //    }
-            //}
-            //string msg7 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem2.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg7 = menuItem.Text;
-            //    }
-            //}
+            else if (MainPagePresenter.mainPageView.Praga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_2 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Praga_menu2();
+            }
+            else if (MainPagePresenter.mainPageView.Praga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Praga_menu3();
+            }
+            else if (MainPagePresenter.mainPageView.Praga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_1 && MainPagePresenter.mainPageView.PetFriendly_Yes)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Praga_menu4();
+            }
+            else if (MainPagePresenter.mainPageView.Praga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Praga_menu5();
+            }
+            else if (MainPagePresenter.mainPageView.Praga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_3 && MainPagePresenter.mainPageView.Rooms_3 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_2 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Praga_menu6();
+            }
+            else if (MainPagePresenter.mainPageView.Praga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_ClujNapoca && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Praga_menu7();
+            }
+            else if (MainPagePresenter.mainPageView.Praga_submenu && MainPagePresenter.mainPageView.CityOfDeparture_Bucharest && MainPagePresenter.mainPageView.Nights_5 && MainPagePresenter.mainPageView.Rooms_1 && MainPagePresenter.mainPageView.Adults_2 && MainPagePresenter.mainPageView.Children_0 && MainPagePresenter.mainPageView.PetFriendly_No)
+            {
+                MainPagePresenter presenter = new MainPagePresenter(PackagesPresenter.mainPageView, this);
+                presenter.Praga_menu8();
+            }
+            else
+            {
+                MessageBox.Show("We don't have offers for these options, please try select other options!");
+            }
             myCon.Close();
         }
     }

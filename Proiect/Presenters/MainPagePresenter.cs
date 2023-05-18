@@ -33,184 +33,1023 @@ namespace Proiect.Presenters
             mainPageView = view;
             circuitsView = view2;
         }
-       
+       //PARIS
         public void Paris_menu()
         {
             myCon.Open();
-            //string msg1 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in MainPagePresenter.mainPageView.Destinations)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg1 = menuItem.Text;
-            //    }
-            //}
-            //string msg2 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in availableCitiesToolStripMenuItem.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg2 = menuItem.Text;
-            //    }
-            //}
-            //string msg3 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in availableOptionsToolStripMenuItem.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg3 = menuItem.Text;
-            //    }
-            //}
-            //string msg4 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in availableOptionsToolStripMenuItem1.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg4 = menuItem.Text;
-            //    }
-            //}
-            //string msg5 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg5 = menuItem.Text;
-            //    }
-            //}
-            //string msg6 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem1.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg6 = menuItem.Text;
-            //    }
-            //}
-            //string msg7 = string.Empty;
-            //foreach (ToolStripMenuItem menuItem in chooseToolStripMenuItem2.DropDownItems)
-            //{
-            //    if (menuItem.Checked == true)
-            //    {
-            //        msg7 = menuItem.Text;
-            //    }
-            //}
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Accomodation_type, PLECARE.CITY AS DEPARTURE, (ACTIVITATI.BUDGET+CAZARE.BUDGET) AS TOTAL FROM ACTIVITATI INNER JOIN CAZARE ON ACTIVITATI.ID=CAZARE.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID ", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=1 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();  
+        }
+        public void Paris_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=1 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Paris_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=1 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Paris_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=1 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Paris_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=1 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Paris_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=1 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Paris_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=1 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Paris_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=1 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //MILANO
         public void Milano_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 2", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=2 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Milano_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=2 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Milano_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=2 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Milano_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=2 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Milano_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=2 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Milano_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=2 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Milano_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=2 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Milano_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=2 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //BARCELONA
         public void Barcelona_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity,Budget FROM ACTIVITATI WHERE ID = 5", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=5 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Barcelona_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=5 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Barcelona_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=5 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Barcelona_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=5 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Barcelona_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=5 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Barcelona_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=5 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Barcelona_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=5 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Barcelona_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=5 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //LONDON
         public void London_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 6", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=6 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void London_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=6 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void London_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=6 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void London_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=6 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void London_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=6 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void London_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=6 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void London_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=6 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void London_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=6 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //BERLIN
         public void Berlin_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 7", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=7 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Berlin_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=7 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Berlin_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=7 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Berlin_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=7 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Berlin_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=7 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Berlin_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=7 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Berlin_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=7 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Berlin_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=7 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //ABU DHABI
         public void AbuDhabi_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 8", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=8 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void AbuDhabi_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=8 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void AbuDhabi_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=8 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void AbuDhabi_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=8 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void AbuDhabi_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=8 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void AbuDhabi_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=8 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void AbuDhabi_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=8 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void AbuDhabi_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=8 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //AMSTERDAM
         public void Amsterdam_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 9", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=9 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Amsterdam_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=9 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Amsterdam_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=9 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Amsterdam_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=9 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Amsterdam_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=9 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Amsterdam_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=9 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Amsterdam_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=9 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Amsterdam_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=9 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //ANKARA
         public void Ankara_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 10", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=10 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Ankara_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=10 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Ankara_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=10 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Ankara_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=10 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Ankara_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=10 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Ankara_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=10 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Ankara_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=10 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Ankara_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=10 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //BELGRAD
         public void Belgrad_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 11", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=11 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
-        public void Bruxelles_menu()
+        public void Belgrad_menu2()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 12", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=11 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Belgrad_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=11 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Belgrad_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=11 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Belgrad_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=11 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Belgrad_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=11 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Belgrad_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=11 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Belgrad_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=11 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //BRUSSELS
+        public void Brussels_menu()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=12 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Brussels_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=12 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Brussels_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=12 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Brussels_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=12 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Brussels_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=12 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Brussels_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=12 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Brussels_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=12 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Brussels_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=12 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //BUDAPEST
         public void Budapest_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 13", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=13 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Budapest_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=13 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Budapest_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=13 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Budapest_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=13 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Budapest_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=13 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Budapest_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=13 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Budapest_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=13 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Budapest_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=13 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //COPENHAGA
         public void Copenhaga_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 14", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=14 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Copenhaga_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=14 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Copenhaga_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=14 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Copenhaga_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=14 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Copenhaga_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=14 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Copenhaga_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=14 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Copenhaga_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=14 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Copenhaga_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=14 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //OSLO
         public void Oslo_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 15", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=15 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
             myCon.Close();
         }
+        public void Oslo_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=15 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Oslo_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=15 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Oslo_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=15 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Oslo_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=15 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Oslo_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=15 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Oslo_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=15 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Oslo_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=15 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        //PRAGA
         public void Praga_menu()
         {
             myCon.Open();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT Activity, Budget FROM ACTIVITATI WHERE ID = 16", myCon);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=16 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Praga_menu2()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=16 AND CAZARE.NO_ROOMS=2 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Praga_menu3()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=16 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Praga_menu4()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=16 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=1 AND CAZARE.PET_FRIENDLY LIKE 'Y%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Praga_menu5()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=16 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Praga_menu6()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=16 AND CAZARE.NO_ROOMS=3 AND CAZARE.NO_NIGHTS=3 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=2 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Praga_menu7()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=16 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'C%'", myCon);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            packagesView.gridView = dt;
+            myCon.Close();
+        }
+        public void Praga_menu8()
+        {
+            myCon.Open();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT DESTINATII.CITY, PLECARE.CITY AS DEPARTURE, ACCOMODATION_TYPE AS ACCOMODATION, NO_NIGHTS, NO_ROOMS, ADULTS, CHILDREN, PET_FRIENDLY, PERIOD, CAZARE.BUDGET AS TOTAL FROM CAZARE JOIN DESTINATII ON CAZARE.ID=DESTINATII.ID JOIN PLECARE ON CAZARE.ID=PLECARE.ID WHERE CAZARE.ID=16 AND CAZARE.NO_ROOMS=1 AND CAZARE.NO_NIGHTS=5 AND CAZARE.ADULTS=2 AND CAZARE.CHILDREN=0 AND CAZARE.PET_FRIENDLY LIKE 'N%' AND PLECARE.CITY LIKE 'B%'", myCon);
             DataTable dt = new DataTable();
             da.Fill(dt);
             packagesView.gridView = dt;
