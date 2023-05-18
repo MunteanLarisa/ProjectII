@@ -1152,6 +1152,7 @@ namespace Proiect.Presenters
             circuitsView.gridView = dt;
             myCon.Close();
         }
+     
     }
 }
 
