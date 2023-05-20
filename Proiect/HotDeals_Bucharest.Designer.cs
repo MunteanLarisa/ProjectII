@@ -41,7 +41,7 @@
             this.pictureBox1.Image = global::Proiect.Properties.Resources.logi1;
             this.pictureBox1.InitialImage = global::Proiect.Properties.Resources.logi;
             this.pictureBox1.Location = new System.Drawing.Point(87, -98);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(627, 91);
             this.pictureBox1.TabIndex = 12;
@@ -56,9 +56,10 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.GridColor = System.Drawing.Color.White;
             this.dataGridView2.Location = new System.Drawing.Point(27, 123);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(957, 194);
             this.dataGridView2.TabIndex = 15;
             // 
@@ -67,7 +68,7 @@
             this.pictureBox2.Image = global::Proiect.Properties.Resources.logi1;
             this.pictureBox2.InitialImage = global::Proiect.Properties.Resources.logi;
             this.pictureBox2.Location = new System.Drawing.Point(-100, 34);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(627, 91);
             this.pictureBox2.TabIndex = 14;

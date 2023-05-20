@@ -52,7 +52,7 @@ namespace Proiect.Presenters
             }
             else
             {
-                MessageBox.Show("PLease complete all fileds!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please complete all fileds!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
       
            

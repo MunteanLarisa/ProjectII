@@ -20,6 +20,7 @@ namespace Proiect
         {
             InitializeComponent();        
         }
+     
 
         public ToolStripItemCollection Destinations { get => availableDestinationsToolStripMenuItem.DropDownItems; set => availableDestinationsToolStripMenuItem.ToString(); }
         public string DepartureCity { get => availableCitiesToolStripMenuItem.Text; set => availableCitiesToolStripMenuItem.Text = value; }
@@ -74,8 +75,7 @@ namespace Proiect
         
         private void button1_Click(object sender, EventArgs e)
         {
-            MainPagePresenter presenter = new MainPagePresenter(this);
-            presenter.Search();
+           
             string msg1 = string.Empty;
             foreach (ToolStripMenuItem menuItem in availableDestinationsToolStripMenuItem.DropDownItems)
             {
@@ -132,7 +132,9 @@ namespace Proiect
                     msg7 = menuItem.Text;
                 }
             }
-            MessageBox.Show("You have chosen: \nDestination:" + msg1 + "\nDeparture city:" + msg2 + "\nNumber of nights:" + msg3 + "\nNumber of rooms:" + msg4 + "\nAdults:" + msg5 + "\nChildren: " + msg6 + "\nPet:" + msg7 + ".", "Selection");
+            MessageBox.Show("You have chosen: \nDestination:" + msg1 + "\nDeparture city:" + msg2 + "\nNumber of nights:" + msg3 + "\nNumber of rooms:" + msg4 + "\nAdults:" + msg5 + "\nChildren: " + msg6 + "\nPet:" + msg7 + ".", "Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MainPagePresenter presenter = new MainPagePresenter(this);
+            presenter.Search();
 
         }
     private void button2_Click(object sender, EventArgs e)
@@ -244,13 +246,6 @@ namespace Proiect
             ExoticCircuits_Maldives c = new ExoticCircuits_Maldives();
             c.Show();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-     
     }
 }
 

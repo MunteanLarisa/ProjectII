@@ -11,6 +11,7 @@ using Proiect.Views;
 using Proiect.Models;
 using Proiect.Presenters;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Proiect
 {
@@ -615,15 +616,29 @@ namespace Proiect
             }
             else
             {
-                MessageBox.Show("We don't have offers for these options, please try select other options!");
+                MessageBox.Show("We don't have offers for these options, please try select other options!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             myCon.Close();
         }
 
+ 
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string gridViewItem = dataGridView1.SelectedRows.ToString();
+            MessageBox.Show("You selected:'" + gridViewItem + '"');
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            Checkout f = new Checkout();
-            f.Show();
+            if (dataGridView1.Rows.ToString() != null)
+            {
+                Checkout f = new Checkout();
+                f.Show();
+            }
+            else MessageBox.Show("Please select an option for checkout!");
         }
     }
 }
+    
+

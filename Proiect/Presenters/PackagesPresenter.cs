@@ -24,12 +24,5 @@ namespace Proiect.Presenters
             packagesView = view;
             mainPageView = view2;
         }
-        public void Db()
-        {
-            //SqlConnection myCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Proiect_II\ProjectII\Proiect\Database.mdf;Integrated Security=True");
-            //myCon.Open();
-            //SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM PLECARE WHERE Oras = CLUJ-NAPOCA", myCon);
-            //myCon.Close();
-        }
     }
 }
