@@ -52,10 +52,18 @@ namespace Proiect
             }
         }
 
+        string IRegister.Username { get => txtUsername.Text; set => txtUsername.Text = value; }
+        string IRegister.Password { get => txtPassword.Text; set => txtPassword.Text = value; }
+        string IRegister.ConfPassword { get => txtConfirmPass.Text; set => txtConfirmPass.Text = value; }
+        string IRegister.ErrorMessageSignup { get => errorMessageSignup.Text; set => errorMessageSignup.Text = value; }
+        bool IRegister.ShowErrorMessageSignup { get => errorMessageSignup.Visible; set => errorMessageSignup.Visible = value; }
+
+        public event EventHandler? SignupAttempted;
         public SignUp()
         {
             InitializeComponent();
         }
+
 
         private void Form2_Load(object sender, EventArgs e)
         {

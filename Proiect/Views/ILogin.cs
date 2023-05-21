@@ -11,9 +11,13 @@ namespace Proiect.Views
 {
     public interface ILogin
     {
-        string LoginUsername { get; set; }
-        string LoginPassword { get; set;  }
-        
+        public String LoginUsername { get; set; }
+        public String LoginPassword { get; set;  }
+        public String ErrorMessageLogin { get; set; }
+        public bool ShowErrorMessageLogin { get; set; }
+        public event EventHandler LoginAttempted;
+
+
     }
     
 }

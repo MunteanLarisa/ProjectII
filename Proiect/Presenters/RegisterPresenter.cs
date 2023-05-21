@@ -10,13 +10,39 @@ using System.Windows.Forms;
 
 namespace Proiect.Presenters
 {
-    class RegisterPresenter
+    public class RegisterPresenter
     {
-        IRegister registerView;
+        private readonly IRegister registerView;
 
         public RegisterPresenter(IRegister view)
         {
             registerView = view;
+            registerView.SignupAttempted += signupSignupAttempted;
+        }
+
+
+        public void signupSignupAttempted(object? sender, EventArgs e)
+        {
+            registerView.ShowErrorMessageSignup = false;
+            registerView.ErrorMessageSignup = null;
+
+            if (string.IsNullOrEmpty(registerView.Username))
+            {
+                registerView.ShowErrorMessageSignup = true;
+                registerView.ErrorMessageSignup = "Username field cannot be empty";
+            }
+
+
+            if (string.IsNullOrEmpty(registerView.Password))
+            {
+                registerView.ShowErrorMessageSignup = true;
+                registerView.ErrorMessageSignup = "Password field cannot be empty";
+            }
+            if (string.IsNullOrEmpty(registerView.ConfPassword))
+            {
+                registerView.ShowErrorMessageSignup = true;
+                registerView.ErrorMessageSignup = "Confirmation Password field cannot be empty";
+            }
         }
         public void SignUpButton()
         {

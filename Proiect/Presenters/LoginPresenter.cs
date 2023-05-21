@@ -14,11 +14,32 @@ namespace Proiect.Presenters
 {
     public class LoginPresenter 
     {
-        ILogin loginView;
+        private readonly ILogin loginView;
 
         public LoginPresenter(ILogin view)
         {
             loginView = view;
+            loginView.LoginAttempted += loginLoginAttempted;
+
+        }
+
+        private void loginLoginAttempted(object? sender, EventArgs e)
+        {
+            loginView.ShowErrorMessageLogin = false;
+            loginView.ErrorMessageLogin = null;
+
+            if(string.IsNullOrEmpty(loginView.LoginUsername))
+            {
+                loginView.ShowErrorMessageLogin = true;
+                loginView.ErrorMessageLogin = "Username field cannot be empty";
+            }
+
+            
+            if (string.IsNullOrEmpty(loginView.LoginPassword))
+            {
+                loginView.ShowErrorMessageLogin = true;
+                loginView.ErrorMessageLogin = "Password field cannot be empty";
+            }
         }
  
         public void LoginButton()

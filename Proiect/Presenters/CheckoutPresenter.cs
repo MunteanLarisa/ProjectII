@@ -11,12 +11,72 @@ using System.Data;
 
 namespace Proiect.Presenters
 {
-    class CheckoutPresenter
+    public class CheckoutPresenter
     {
-        ICheckout checkout;
+        private readonly ICheckout checkout;
         public CheckoutPresenter(ICheckout view)
         {
             checkout = view;
+            checkout.CheckoutAttempted += checkoutCheckoutAttempted;
+        }
+        public void checkoutCheckoutAttempted(object? sender, EventArgs e)
+        {
+            checkout.ShowErrorMessageCheckout = false;
+            checkout.ErrorMessageCheckout = null;
+            if (string.IsNullOrEmpty(checkout.FirstName))
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "First Name field cannot be empty";
+            }
+
+
+            if (string.IsNullOrEmpty(checkout.LastName))
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "Last Name field cannot be empty";
+            }
+
+            if (string.IsNullOrEmpty(checkout.Email))
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "Email field cannot be empty";
+            }
+            if (string.IsNullOrEmpty(checkout.PhoneNumber))
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "Phone Number field cannot be empty";
+            }
+            if (string.IsNullOrEmpty(checkout.Day))
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "Day field cannot be empty";
+            }
+            if (string.IsNullOrEmpty(checkout.Month))
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "Month field cannot be empty";
+            }
+            if (string.IsNullOrEmpty(checkout.Year))
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "Year field cannot be empty";
+            }
+            if (!string.IsNullOrEmpty(checkout.Email) && !checkout.Email.Contains("@"))
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "Email field must contain @ character";
+            }
+            if (!string.IsNullOrEmpty(checkout.PhoneNumber) && checkout.PhoneNumber.Length > 10)
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "Phone number must not contain more than 10 digits";
+            }
+            if (!string.IsNullOrEmpty(checkout.Year) && (2023-Int32.Parse(checkout.Year)<18) )
+            {
+                checkout.ShowErrorMessageCheckout = true;
+                checkout.ErrorMessageCheckout = "You must be over 18 years old";
+            }
+            
         }
         public void Checkout()
         {

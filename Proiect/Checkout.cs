@@ -20,13 +20,20 @@ namespace Proiect
             InitializeComponent();
         }
 
-        public string FirstName { get => textBox1.Text; set => textBox1.Text=value; }
-        public string LastName { get => textBox2.Text; set => textBox2.Text=value; }
-        public string Email { get => textBox3.Text; set => textBox3.Text=value; }
-        public string CountryOfResidence { get => textBox5.Text; set => textBox5.Text=value; }
-        public string Day { get => textBox6.Text; set => textBox6.Text=value; }
-        public string Month { get => textBox7.Text; set => textBox8.Text=value; }
-        public string Year { get => textBox8.Text; set => textBox8.Text=value; }
+        
+        string ICheckout.FirstName { get => textBox1.Text; set => textBox1.Text = value; }
+        string ICheckout.LastName { get => textBox2.Text; set => textBox2.Text = value; }
+        string ICheckout.Email { get => textBox3.Text; set => textBox3.Text = value; }
+        string ICheckout.PhoneNumber { get => textBox4.Text; set => textBox4.Text = value; }
+        string ICheckout.CountryOfResidence { get => textBox5.Text; set => textBox5.Text = value; }
+        string ICheckout.Day { get => textBox6.Text; set => textBox6.Text = value; }
+        string ICheckout.Month { get => textBox7.Text; set => textBox8.Text = value; }
+        string ICheckout.Year { get => textBox8.Text; set => textBox8.Text = value; }
+        string ICheckout.ErrorMessageCheckout { get => errorMessageCheckout.Text; set => errorMessageCheckout.Text = value; }
+        bool ICheckout.ShowErrorMessageCheckout { get => errorMessageCheckout.Visible; set => errorMessageCheckout.Visible = value; }
+        public event EventHandler? CheckoutAttempted;
+
+        
 
         private void button1_Click(object sender, EventArgs e)
         {

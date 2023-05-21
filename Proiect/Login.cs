@@ -15,9 +15,13 @@ namespace Proiect
 {
     public partial class Login : Form, ILogin
     {
+        private LoginPresenter loginPresenter;
         public Login()
         {
             InitializeComponent();
+            this.loginPresenter = new LoginPresenter(this);
+
+
         }
 
         public string LoginUsername 
@@ -43,6 +47,13 @@ namespace Proiect
                 textBox_password.Text = value;
             }
         }
+
+        String ILogin.LoginUsername { get => textBox_userName.Text; set => textBox_userName.Text = value; }
+        String ILogin.LoginPassword { get => textBox_password.Text; set => textBox_password.Text = value; }
+        String ILogin.ErrorMessageLogin { get => ErrorMessageLogin.Text; set => ErrorMessageLogin.Text = value; }
+        bool ILogin.ShowErrorMessageLogin { get => ErrorMessageLogin.Visible; set => ErrorMessageLogin.Visible = value; }
+
+        public event EventHandler? LoginAttempted;
 
         private void button_Login_Click(object sender, EventArgs e)
         {
