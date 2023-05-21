@@ -30,6 +30,7 @@
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_ExoticCircuitsMaldives = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -39,34 +40,43 @@
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.GridColor = System.Drawing.Color.White;
-            this.dataGridView.Location = new System.Drawing.Point(27, 123);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView.Location = new System.Drawing.Point(19, 112);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(957, 194);
+            this.dataGridView.Size = new System.Drawing.Size(718, 158);
             this.dataGridView.TabIndex = 19;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proiect.Properties.Resources.logi1;
             this.pictureBox1.InitialImage = global::Proiect.Properties.Resources.logi;
-            this.pictureBox1.Location = new System.Drawing.Point(-93, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(-70, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(603, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(452, 65);
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_ExoticCircuitsMaldives
+            // 
+            this.btn_ExoticCircuitsMaldives.BackColor = System.Drawing.Color.Pink;
+            this.btn_ExoticCircuitsMaldives.Location = new System.Drawing.Point(585, 476);
+            this.btn_ExoticCircuitsMaldives.Name = "btn_ExoticCircuitsMaldives";
+            this.btn_ExoticCircuitsMaldives.Size = new System.Drawing.Size(152, 47);
+            this.btn_ExoticCircuitsMaldives.TabIndex = 20;
+            this.btn_ExoticCircuitsMaldives.Text = "Checkout";
+            this.btn_ExoticCircuitsMaldives.UseVisualStyleBackColor = false;
+            // 
             // ExoticCircuits_Maldives
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1039, 666);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(779, 541);
+            this.Controls.Add(this.btn_ExoticCircuitsMaldives);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ExoticCircuits_Maldives";
             this.Text = "ExoticCircuits_Maldives";
             this.Load += new System.EventHandler(this.ExoticCircuits_Maldives_Load);
@@ -80,5 +90,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_ExoticCircuitsMaldives;
     }
 }

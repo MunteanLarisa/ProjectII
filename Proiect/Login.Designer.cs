@@ -82,7 +82,7 @@ namespace Proiect
             this.button_Login.Name = "button_Login";
             this.button_Login.Size = new System.Drawing.Size(152, 41);
             this.button_Login.TabIndex = 20;
-            this.button_Login.Text = "Already have an account? Log  in";
+            this.button_Login.Text = "Log  in";
             this.button_Login.UseVisualStyleBackColor = true;
             this.button_Login.Click += new System.EventHandler(this.button_Login_Click);
             // 
