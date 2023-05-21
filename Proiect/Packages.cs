@@ -17,6 +17,8 @@ namespace Proiect
 {
     public partial class Packages : Form, IPackages
     {
+
+
         public Packages()
         {
             InitializeComponent();
@@ -621,22 +623,10 @@ namespace Proiect
             myCon.Close();
         }
 
- 
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string gridViewItem = dataGridView1.SelectedRows.ToString();
-            MessageBox.Show("You selected:'" + gridViewItem + '"');
-
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.ToString() != null)
-            {
-                Checkout f = new Checkout();
-                f.Show();
-            }
-            else MessageBox.Show("Please select an option for checkout!");
+            Checkout f = new Checkout();
+            f.Show();
         }
     }
 }

@@ -34,5 +34,12 @@ namespace Proiect
             Checkout f = new Checkout();
             f.Show();
         }
+
+        private void btn_HotDealsBucharest_Click(object sender, EventArgs e)
+        {
+            Checkout f = new Checkout();
+            f.Show();
+
+        }
     }
 }

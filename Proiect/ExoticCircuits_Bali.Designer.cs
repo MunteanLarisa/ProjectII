@@ -37,46 +37,52 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.GridColor = System.Drawing.Color.White;
-            this.dataGridView.Location = new System.Drawing.Point(19, 122);
+            this.dataGridView.Location = new System.Drawing.Point(25, 150);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(718, 158);
+            this.dataGridView.Size = new System.Drawing.Size(957, 194);
             this.dataGridView.TabIndex = 15;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proiect.Properties.Resources.logi1;
             this.pictureBox1.InitialImage = global::Proiect.Properties.Resources.logi;
-            this.pictureBox1.Location = new System.Drawing.Point(-66, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(-88, 31);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(452, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(603, 91);
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
             // btn_ExoticCircuitsBali
             // 
             this.btn_ExoticCircuitsBali.BackColor = System.Drawing.Color.Pink;
-            this.btn_ExoticCircuitsBali.Location = new System.Drawing.Point(585, 476);
+            this.btn_ExoticCircuitsBali.Location = new System.Drawing.Point(780, 586);
+            this.btn_ExoticCircuitsBali.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ExoticCircuitsBali.Name = "btn_ExoticCircuitsBali";
-            this.btn_ExoticCircuitsBali.Size = new System.Drawing.Size(152, 47);
+            this.btn_ExoticCircuitsBali.Size = new System.Drawing.Size(203, 58);
             this.btn_ExoticCircuitsBali.TabIndex = 16;
             this.btn_ExoticCircuitsBali.Text = "Checkout";
             this.btn_ExoticCircuitsBali.UseVisualStyleBackColor = false;
+            this.btn_ExoticCircuitsBali.Click += new System.EventHandler(this.btn_ExoticCircuitsBali_Click);
             // 
             // ExoticCircuits_Bali
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(779, 541);
+            this.ClientSize = new System.Drawing.Size(1039, 666);
             this.Controls.Add(this.btn_ExoticCircuitsBali);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ExoticCircuits_Bali";
             this.Text = "ExoticCircuits_Bali";
             this.Load += new System.EventHandler(this.ExoticCircuits_Bali_Load);

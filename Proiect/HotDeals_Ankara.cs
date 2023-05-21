@@ -42,6 +42,11 @@ namespace Proiect
             HotDealsAnkaraPresenter presenter = new HotDealsAnkaraPresenter(this);
             presenter.Populate();
         }
-   
+
+        private void btn_HotDealsAnkara_Click(object sender, EventArgs e)
+        {
+            Checkout f = new Checkout();
+            f.Show();
+        }
     }
 }

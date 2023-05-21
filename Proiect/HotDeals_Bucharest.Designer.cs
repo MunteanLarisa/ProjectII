@@ -41,9 +41,10 @@
             // 
             this.pictureBox1.Image = global::Proiect.Properties.Resources.logi1;
             this.pictureBox1.InitialImage = global::Proiect.Properties.Resources.logi;
-            this.pictureBox1.Location = new System.Drawing.Point(65, -80);
+            this.pictureBox1.Location = new System.Drawing.Point(87, -98);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(470, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(627, 91);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
@@ -55,44 +56,48 @@
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.GridColor = System.Drawing.Color.White;
-            this.dataGridView2.Location = new System.Drawing.Point(20, 100);
+            this.dataGridView2.Location = new System.Drawing.Point(27, 123);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(718, 158);
+            this.dataGridView2.Size = new System.Drawing.Size(957, 194);
             this.dataGridView2.TabIndex = 15;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proiect.Properties.Resources.logi1;
             this.pictureBox2.InitialImage = global::Proiect.Properties.Resources.logi;
-            this.pictureBox2.Location = new System.Drawing.Point(-58, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(-77, 15);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(470, 74);
+            this.pictureBox2.Size = new System.Drawing.Size(627, 91);
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
             // btn_HotDealsBucharest
             // 
             this.btn_HotDealsBucharest.BackColor = System.Drawing.Color.Pink;
-            this.btn_HotDealsBucharest.Location = new System.Drawing.Point(559, 441);
+            this.btn_HotDealsBucharest.Location = new System.Drawing.Point(745, 543);
+            this.btn_HotDealsBucharest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_HotDealsBucharest.Name = "btn_HotDealsBucharest";
-            this.btn_HotDealsBucharest.Size = new System.Drawing.Size(179, 58);
+            this.btn_HotDealsBucharest.Size = new System.Drawing.Size(239, 71);
             this.btn_HotDealsBucharest.TabIndex = 16;
             this.btn_HotDealsBucharest.Text = "Checkout";
             this.btn_HotDealsBucharest.UseVisualStyleBackColor = false;
+            this.btn_HotDealsBucharest.Click += new System.EventHandler(this.btn_HotDealsBucharest_Click);
             // 
             // HotDeals_Bucharest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(779, 541);
+            this.ClientSize = new System.Drawing.Size(1039, 666);
             this.Controls.Add(this.btn_HotDealsBucharest);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HotDeals_Bucharest";
             this.Text = "HotDeals_Bucharest";
             this.Load += new System.EventHandler(this.HotDeals_Bucharest_Load);

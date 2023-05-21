@@ -28,5 +28,11 @@ namespace Proiect
             ExoticBoraBoraPresenter presenter = new ExoticBoraBoraPresenter(this);
             presenter.Populate();
         }
+
+        private void btn_ExoticCircuitBoraBora_Click(object sender, EventArgs e)
+        {
+            Checkout f = new Checkout();
+            f.Show();
+        }
     }
 }

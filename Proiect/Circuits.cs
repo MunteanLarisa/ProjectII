@@ -69,6 +69,10 @@ namespace Proiect
             myCon.Close();
         }
 
-       
+        private void btn_ExoticCircuitsMaldives_Click(object sender, EventArgs e)
+        {
+            Checkout f = new Checkout();
+            f.Show();
+        }
     }
 }
