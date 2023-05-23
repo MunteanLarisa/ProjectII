@@ -98,7 +98,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HotDeals_Bruxelles";
-            this.Text = "HotDeals_Bruxelles";
+            this.Text = "HotDeals Bruxelles";
             this.Load += new System.EventHandler(this.HotDeals_Bruxelles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

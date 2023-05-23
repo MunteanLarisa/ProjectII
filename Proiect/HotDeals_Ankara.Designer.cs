@@ -85,7 +85,7 @@ namespace Proiect
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HotDeals_Ankara";
-            this.Text = "HotDeals";
+            this.Text = "HotDeals Ankara";
             this.Load += new System.EventHandler(this.HotDeals_Ankara_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Ankara)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

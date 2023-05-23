@@ -84,7 +84,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ExoticCircuits_Bali";
-            this.Text = "ExoticCircuits_Bali";
+            this.Text = "ExoticCircuits Bali";
             this.Load += new System.EventHandler(this.ExoticCircuits_Bali_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
